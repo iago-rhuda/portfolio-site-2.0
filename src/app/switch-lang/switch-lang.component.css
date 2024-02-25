@@ -1,0 +1,54 @@
+.language-buttons {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  background: linear-gradient(to bottom, #adb5bd, #ced4da);
+  z-index: 99999;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+button.selected {
+  font-weight: bold;
+}
+
+.dropdown {
+  background: linear-gradient(to bottom, #adb5bd, #ced4da);
+  
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 0;
+  background-color: #212529;
+  align-items: center;
+  z-index: 99999;
+}
+
+.dropdown-item {
+  color: #ced4da;
+}
+
+.btn {
+  color: #212529;
+}

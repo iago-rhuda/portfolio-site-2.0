@@ -1,0 +1,6 @@
+========================== MELHORIAS A SEREM FEITAS PARA PRÓXIMA VERSÃO ==========================
+
+1. Encapsular o/os botão/botões de github ... em um componente Angular.
+2. Animações mais eficientes (atualmente cada componente deve repetir o mesmo código de animações)
+3. Colocar uma transição na troca de slides
+4. Fazer o slide rolar sozinho

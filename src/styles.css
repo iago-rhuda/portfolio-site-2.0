@@ -1,0 +1,23 @@
+/* Pequenas Telas: até 768px
+Celular: de 600px até 768px
+Tablets: 768px até 992px
+Desktop: de 992px até 1200px
+Grandes Telas: acima de 1200px */
+
+
+body {
+    background-color: #CED4DA;
+}
+/* scrollbar config */
+*::-webkit-scrollbar{
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track{
+    width: 12px;
+    background-color: #ced4da;
+  }
+  *::-webkit-scrollbar-thumb{
+    background-color: #212529;
+    border-radius: 3px;
+  }
+/* end of scrollbar config */

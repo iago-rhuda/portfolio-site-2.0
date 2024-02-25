@@ -1,0 +1,22 @@
+<!--
+  <div class="language-buttons">
+    <div class="button-container">
+      <button *ngFor="let option of options" (click)="onChange(option.value)"
+      [class.selected]="translate.currentLang === option.value">
+      {{ option.display }}
+    </button>
+  </div>
+</div>
+-->
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Languages
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">ENGLISH</a></li>
+    <li><a class="dropdown-item" href="#">PORTUGUÊS</a></li>
+    <li><a class="dropdown-item" href="#">FRANÇAIS</a></li>
+    <li><a class="dropdown-item" href="#">ITALIANO</a></li>
+  </ul>
+</div>

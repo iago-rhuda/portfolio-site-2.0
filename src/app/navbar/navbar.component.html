@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <a href="#HOME" (click)="setSecaoAtiva('HOME')" [class.active]="secaoAtiva === 'HOME'" class="nav-link active" [attr.data-target]="'HOME' | translate"><i class="bi bi-house-door"></i></a>
+    <a href="#ABOUT" (click)="setSecaoAtiva('ABOUT')" [class.active]="secaoAtiva === 'ABOUT'" class="nav-link" [attr.data-target]="'ABOUT' | translate"><i class="bi bi-person"></i></a>
+    <a href="#QUALIFICATIONS" (click)="setSecaoAtiva('QUALIFICATIONS')" [class.active]="secaoAtiva === 'QUALIFICATIONS'" class="nav-link" [attr.data-target]="'QUALIFICATIONS' | translate"><i
+            class="bi bi-book"></i></a>
+    <a href="#SKILLS" (click)="setSecaoAtiva('SKILLS')" [class.active]="secaoAtiva === 'SKILLS'" class="nav-link" [attr.data-target]="'SKILLS' | translate"><i class="bi bi-box-seam"></i></a>
+    <a href="#PORTFOLIO" (click)="setSecaoAtiva('PORTFOLIO')" [class.active]="secaoAtiva === 'PORTFOLIO'" class="nav-link" [attr.data-target]="'PORTFOLIO' | translate"><i class="bi bi-award"></i></a>
+    <a href="#CURRICULUM" (click)="setSecaoAtiva('CURRICULUM')" [class.active]="secaoAtiva === 'CURRICULUM'" class="nav-link" [attr.data-target]="'CURRICULUM' | translate"><i
+            class="bi bi-card-list"></i></a>
+    <a href="#CONTACT" (click)="setSecaoAtiva('CONTACT')" [class.active]="secaoAtiva === 'CONTACT'" class="nav-link" [attr.data-target]="'CONTACT' | translate"><i
+            class="bi bi-chat-text-fill"></i></a>
+</nav>

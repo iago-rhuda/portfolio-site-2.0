@@ -1,0 +1,301 @@
+<!-- ***** TRANSLATIONS ***** -->
+<app-switch-lang class="s"></app-switch-lang>
+
+<!-- ***** NAVBAR ***** -->
+<app-navbar class="navbar"></app-navbar>
+
+<!-- ***** HOME SECTION ***** -->
+<section id="HOME">
+    <div class="container">
+        <h1 class="name" data-anime="up">Iago Rhudá Ramos</h1>
+        <br>
+        <h2 class="title" data-anime="down">{{ 'COMPUTER ENGINEER' | translate }}</h2>
+    </div>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** ABOUT SECTION ***** -->
+<section id="ABOUT">
+    <div class="row">
+        <div class="col-md-12">
+            <p data-anime="down">{{ 'ABOUT ME' | translate }}</p>
+            <br>
+        </div>
+
+        <div class="col-md-6">
+            <img src="../assets/img/imagem - Iago.png" class="rounded mx-auto d-block" alt="Foto do Iago"
+                data-anime="left">
+        </div>
+
+        <div class="col-md-6">
+            <p data-anime="right">{{ 'BIRTH' | translate }}: 07/02/2003 | {{ calculateAge() }} {{ 'YEARS' |
+                translate }}
+            </p>
+            <p data-anime="right">Curitiba, Paraná, {{ 'BRAZIL' | translate }}.</p>
+            <!--<p data-anime="right">Interesses: Foguetes, astronomia e engenharias.</p>-->
+            <p data-anime="right">Hobbies:</p>
+            <div class="row" data-anime="right">
+                <div class="col-md-6">
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-1' | translate }}</p>
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-2' | translate }}</p>
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-3' | translate }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-4' | translate }}</p>
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-5' | translate }}</p>
+                    <p><i class="bi bi-dot"></i>{{ 'HOBBY-6' | translate }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** QUALIFICATIONS SECTION ***** -->
+<section id="QUALIFICATIONS">
+    <div class="qualifications" data-anime="up">
+        <div>
+            <h4>{{ 'ACADEMIC' | translate }}</h4>
+            <h5>2022 - {{ 'IN PROGRESS' | translate }}</h5>
+            <p>Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+
+            <h4>{{ 'EDIFICATION' | translate }}</h4>
+            <h5>2018 - 2021</h5>
+            <p>Centro Estadual de Educação Profissional de Curitiba (CEEP)</p>
+
+            <h4>CS50 ({{ 'CC50' | translate }} 50)</h4>
+            <h5>2022</h5>
+            <p>Harvard and Yale
+                University</p>
+        </div>
+    </div>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** SKILLS SECTION ***** -->
+<section id="SKILLS">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col2">
+                <h2>{{ 'PROGRAMING LANGUAGES' | translate }}</h2>
+                <p class="mt-3 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filetype-py" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855z" />
+                    </svg> Python</p>
+                <div class="progress">
+                    <div class="progress-bar" data-anime="left" role="progressbar" style="width: 75%;"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+                <br>
+                <p class="mt-3 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filetype-cs" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.629 15.29a1.176 1.176 0 0 1-.112-.449h.765a.578.578 0 0 0 .255.384c.07.049.153.087.249.114.096.028.202.041.32.041.163 0 .301-.023.412-.07a.559.559 0 0 0 .255-.193.507.507 0 0 0 .085-.29.387.387 0 0 0-.152-.326c-.102-.08-.256-.144-.463-.193l-.618-.143a1.72 1.72 0 0 1-.54-.214 1.001 1.001 0 0 1-.35-.367 1.068 1.068 0 0 1-.124-.524c0-.244.064-.457.19-.639.128-.181.303-.322.528-.422.225-.1.483-.149.776-.149.305 0 .565.05.78.152.216.102.383.239.5.41.12.17.186.359.2.566h-.75a.56.56 0 0 0-.12-.258.624.624 0 0 0-.246-.181.923.923 0 0 0-.37-.068c-.216 0-.387.05-.512.152a.472.472 0 0 0-.185.384c0 .121.048.22.144.3a.97.97 0 0 0 .404.175l.621.143c.217.05.405.12.566.211.16.09.285.21.375.358.09.148.134.335.134.56 0 .247-.062.466-.187.656a1.216 1.216 0 0 1-.54.439c-.234.105-.52.158-.858.158a2.21 2.21 0 0 1-.665-.09 1.404 1.404 0 0 1-.477-.252 1.13 1.13 0 0 1-.29-.375Zm-2.72-2.23a1.732 1.732 0 0 0-.103.633v.495c0 .246.034.455.102.627a.833.833 0 0 0 .299.392.845.845 0 0 0 .478.132.86.86 0 0 0 .4-.088.7.7 0 0 0 .273-.249.799.799 0 0 0 .118-.363h.764v.076a1.27 1.27 0 0 1-.225.674c-.137.193-.32.345-.551.454a1.81 1.81 0 0 1-.785.164c-.36 0-.664-.072-.914-.217a1.424 1.424 0 0 1-.572-.626C.064 14.892 0 14.567 0 14.188v-.498c0-.38.065-.705.196-.979a1.44 1.44 0 0 1 .572-.633c.252-.148.555-.222.91-.222.22 0 .422.032.607.097.188.062.35.153.49.272a1.324 1.324 0 0 1 .465.964v.073h-.764a.85.85 0 0 0-.12-.38.7.7 0 0 0-.273-.261.803.803 0 0 0-.398-.097.814.814 0 0 0-.475.138.868.868 0 0 0-.302.398Z" />
+                    </svg> C/C++</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100" data-anime="left">50%</div>
+                </div>
+                <br>
+                <p class='mt-3 mb-0'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filetype-html" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999h.706m4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z" />
+                    </svg> HTML</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                        data-anime="left" aria-valuemin="0" aria-valuemax="100" data-anime="left">60%</div>
+                </div>
+                <br>
+                <p class="mt-3 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filetype-css" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.397 14.841a1.13 1.13 0 0 0 .401.823c.13.108.289.192.478.252.19.061.411.091.665.091.338 0 .624-.053.859-.158.236-.105.416-.252.539-.44.125-.189.187-.408.187-.656 0-.224-.045-.41-.134-.56a1.001 1.001 0 0 0-.375-.357 2.027 2.027 0 0 0-.566-.21l-.621-.144a.97.97 0 0 1-.404-.176.37.37 0 0 1-.144-.299c0-.156.062-.284.185-.384.125-.101.296-.152.512-.152.143 0 .266.023.37.068a.624.624 0 0 1 .246.181.56.56 0 0 1 .12.258h.75a1.092 1.092 0 0 0-.2-.566 1.21 1.21 0 0 0-.5-.41 1.813 1.813 0 0 0-.78-.152c-.293 0-.551.05-.776.15-.225.099-.4.24-.527.421-.127.182-.19.395-.19.639 0 .201.04.376.122.524.082.149.2.27.352.367.152.095.332.167.539.213l.618.144c.207.049.361.113.463.193a.387.387 0 0 1 .152.326.505.505 0 0 1-.085.29.559.559 0 0 1-.255.193c-.111.047-.249.07-.413.07-.117 0-.223-.013-.32-.04a.838.838 0 0 1-.248-.115.578.578 0 0 1-.255-.384h-.765ZM.806 13.693c0-.248.034-.46.102-.633a.868.868 0 0 1 .302-.399.814.814 0 0 1 .475-.137c.15 0 .283.032.398.097a.7.7 0 0 1 .272.26.85.85 0 0 1 .12.381h.765v-.072a1.33 1.33 0 0 0-.466-.964 1.441 1.441 0 0 0-.489-.272 1.838 1.838 0 0 0-.606-.097c-.356 0-.66.074-.911.223-.25.148-.44.359-.572.632-.13.274-.196.6-.196.979v.498c0 .379.064.704.193.976.131.271.322.48.572.626.25.145.554.217.914.217.293 0 .554-.055.785-.164.23-.11.414-.26.55-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.764a.799.799 0 0 1-.118.363.7.7 0 0 1-.272.25.874.874 0 0 1-.401.087.845.845 0 0 1-.478-.132.833.833 0 0 1-.299-.392 1.699 1.699 0 0 1-.102-.627v-.495ZM6.78 15.29a1.176 1.176 0 0 1-.111-.449h.764a.578.578 0 0 0 .255.384c.07.049.154.087.25.114.095.028.201.041.319.041.164 0 .301-.023.413-.07a.559.559 0 0 0 .255-.193.507.507 0 0 0 .085-.29.387.387 0 0 0-.153-.326c-.101-.08-.256-.144-.463-.193l-.618-.143a1.72 1.72 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.068 1.068 0 0 1-.123-.524c0-.244.063-.457.19-.639.127-.181.303-.322.527-.422.225-.1.484-.149.777-.149.304 0 .564.05.779.152.217.102.384.239.5.41.12.17.187.359.2.566h-.75a.56.56 0 0 0-.12-.258.624.624 0 0 0-.246-.181.923.923 0 0 0-.37-.068c-.216 0-.387.05-.512.152a.472.472 0 0 0-.184.384c0 .121.047.22.143.3a.97.97 0 0 0 .404.175l.621.143c.217.05.406.12.566.211.16.09.285.21.375.358.09.148.135.335.135.56 0 .247-.063.466-.188.656a1.216 1.216 0 0 1-.539.439c-.234.105-.52.158-.858.158-.254 0-.476-.03-.665-.09a1.404 1.404 0 0 1-.478-.252 1.13 1.13 0 0 1-.29-.375Z" />
+                    </svg> CSS</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40"
+                        aria-valuemin="0" aria-valuemax="100" data-anime="left">40%</div>
+                </div>
+                <br>
+                <p class="mt-3 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-database" viewBox="0 0 16 16">
+                        <path
+                            d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525" />
+                    </svg> SQL</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="50" data-anime="left">50%</div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col1" data-anime="left">
+                <h2>{{ 'LANGUAGES' | translate }}</h2>
+                <p class="mt-3 mb-0"><i class="bi bi-translate"></i> {{ 'PORTUGUESE' | translate }} ({{ 'NATIVE' |
+                    translate }})</p>
+                <p class="mt-3 mb-0"><i class="bi bi-translate"></i> {{ 'ENGLISH' | translate }} ({{ 'ADVANCED' |
+                    translate }})</p>
+                <p class="mt-3 mb-0"><i class="bi bi-translate"></i> {{ 'FRENCH' | translate }} ({{ 'BASIC' |
+                    translate }})</p>
+                <p class="mt-3 mb-0"><i class="bi bi-translate"></i> {{ 'ITALIAN' | translate }} ({{ 'BASIC' |
+                    translate }})</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** PORTFOLIO SECTION ***** -->
+<section id="PORTFOLIO">
+    <app-slide></app-slide>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** CURRICULUM SECTION ***** -->
+<section id="CURRICULUM">
+    <p class="margin-button" data-anime="down">{{ 'CURRICULUM TEXT' | translate }}</p>
+    <div class="div-button margin-button" data-anime="left">
+        <a href="../assets/CV - Iago Rhudá Ramos.pdf" download="CV - Iago Rhudá Ramos.pdf">
+            <button id="download-btn" type="button" class="btn btn-outline-secondary">{{ "CURRICULUM BUTTON" | translate
+                }}
+                [PT] <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                </svg></button>
+        </a>
+    </div>
+    <div class="div-button margin-button" data-anime="right">
+        <a href="../assets/CV - Iago Rhudá Ramos.pdf" download="CV - Iago Rhudá Ramos.pdf">
+            <button id="download-btn" type="button" class="btn btn-outline-secondary">{{ "CURRICULUM BUTTON" | translate
+                }}
+                [EN] <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                </svg></button>
+        </a>
+    </div>
+    <div class="div-button margin-button" data-anime="left">
+        <a href="../assets/CV - Iago Rhudá Ramos.pdf" download="CV - Iago Rhudá Ramos.pdf">
+            <button id="download-btn" type="button" class="btn btn-outline-secondary">{{ "CURRICULUM BUTTON" | translate
+                }}
+                [FR] <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                </svg></button>
+        </a>
+    </div>
+    <div class="div-button margin-button" data-anime="right">
+        <a href="../assets/CV - Iago Rhudá Ramos.pdf" download="CV - Iago Rhudá Ramos.pdf">
+            <button id="download-btn" type="button" class="btn btn-outline-secondary">{{ "CURRICULUM BUTTON" | translate
+                }}
+                [IT] <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                    <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                </svg></button>
+        </a>
+    </div>
+</section>
+
+<hr class="w-50 me-auto ms-auto">
+
+<!-- ***** CONTACT SECTION ***** -->
+<section id="CONTACT">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" data-anime="left">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-envelope"></i>.E-mail:</h4>
+                    <p class="card-text">{{ 'CONTACT-CARD-TEXT-1' | translate }}
+                    </p>
+                    <p>iagorhuraramos@gmail.com</p>
+                </div>
+            </div>
+            <br>
+            <div class="card" data-anime="down">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-whatsapp"></i>.<i class="bi bi-telegram"></i>.<i
+                            class="bi bi-telephone-plus"></i>.{{ 'CELL PHONE' | translate }}:
+                    </h4>
+                    <p class="card-text">{{ 'CONTACT-CARD-TEXT-2' | translate }}. +55 (41) 9
+                        9644-6112</p>
+                    <div class="div-button ">
+                        <a href="https://wa.me/996446112" target="_blank">
+                            <button id="download-btn" type="button" class="btn btn-outline-secondary">{{ 'SEND A MESSAGE' | translate }}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="card" data-anime="up">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-github"></i>.GitHub:</h4>
+                    <p class="card-text">{{ 'CONTACT-CARD-TEXT-3' | translate }}!</p>
+                    <div class="div-button">
+                        <a href="https://github.com/iago-rhuda" target="_blank">
+                            <button id="download-btn" type="button" class="btn btn-outline-secondary">
+                                <i class="bi bi-github"></i> {{ 'ACCESS' | translate }}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card" data-anime="right">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-linkedin"></i>.Linkedin:</h4>
+                    <p class="card-text">{{ 'CONTACT-CARD-TEXT-4' | translate }}.</p>
+                    <div class="div-button">
+                        <a href="https://www.linkedin.com/in/iago-rhuda-ramos/" target="_blank">
+                            <button id="download-btn" type="button" class="btn btn-outline-secondary">
+                                <i class="bi bi-linkedin"></i> {{ 'ACCESS' | translate }}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<script>
+    // calculating the actual age
+    function idade() {
+        var d = new Date,
+            ano_atual = d.getFullYear(),
+            mes_atual = d.getMonth() + 1,
+            dia_atual = d.getDate(),
+            ano_aniversario = 2003,
+            mes_aniversario = 2,
+            dia_aniversario = 7,
+            quantos_anos = ano_atual - ano_aniversario;
+        if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
+            quantos_anos--;
+        }
+        return quantos_anos < 0 ? 0 : quantos_anos;
+    }
+    var mostrar_idade = idade();
+    console.log(mostrar_idade);
+    document.getElementById("idade").innerHTML = mostrar_idade + " anos";
+</script>

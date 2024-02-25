@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type='icon' href="img/motherboard.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    
+    <title>Iago Rhudá</title>
+</head>
+
+<body>
+    <i class="bi bi-list-nested menu-mobile"></i>
+
+    <aside id='header'>
+        <section class="profile">
+            <img src="img/imagem - Iago.png" alt="Foto do Iago">
+            <h1>Iago Rhudá Ramos</h1>
+            <div class="social-links mt-4 text-center">
+                <a href="iagorhudaramos@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope social-links-email"></i>
+                </a>
+                <a href="https://github.com/iago-rhuda" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github social-links-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iago-rhuda-ramos/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin social-links-linkedin"></i>
+                </a>
+                <a href="https://wa.me/996446112" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-whatsapp social-links-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+
+        <nav id='navbar' class="nav-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#inicio"><i class="bi bi-house"></i>Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre"><i class="bi bi-person"></i>Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formacoes"><i class="bi bi-book"></i>
+                        Formações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#habilidades"><i class="bi bi-box-seam"></i>
+                        Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#download-curriculo"><i class="bi bi-card-list"></i>
+                        Currículo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio"><i class="bi bi-award"></i>
+                        Portfólio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato"><i class="bi bi-chat-text-fill"></i>Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main">
+
+        <section id="inicio" class="row m-0 p-0">
+            <div class="col-md-7 d-flex justify-content-center align-items-center flex-column">
+                <h2 class="text-white">Iago Rhudá</h2>
+                <span id="subtitle" class="text-white text-shadow">Estudante de Engenharia de Computação.</span>
+                <!--<span id="subtitle2" class="text-white text-shadow">Estudante em especialização em I.A.</span>-->
+            </div>
+        </section>
+
+        <section class="container mt-5 vizualizacao" id='sobre'>
+            <div class="row w-100">
+                <div class="col-md-12" data-anime="down">
+                    <h2 class='pt-3 text-white'>Sobre</h2>
+                    <p class="text-white">Eu sou apaixonado pelo conhecimento, exploração e crescimento pessoal. Me fascina o espaço e as últimas descobertas e missões espaciais. Também sou entusiasta da engenharia, que desafia minha mente e me permite aplicar meus conhecimentos em projetos criativos. A leitura é uma das minhas paixões, pois me transporta para diferentes mundos e amplia minha compreensão. Pesquisar e aprender são partes essenciais da minha vida, sempre em busca de novos insights e conhecimentos. Dedico tempo para explorar diferentes temas e estou aberto a novas oportunidades de aprendizado.</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img class="img-fluid shadow img-iago" src="img/img iago.jpeg" alt="Foto do Iago" data-anime="left">
+                </div>
+                <div class="col-md-8 text-white" data-anime="right">
+                    <h3>Estudante em Engenharia de Computação</h3>
+                    <!--
+                    <p class="text-white">Escreve mais coisa aqui meu nobre.</p>
+                    -->
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-md-6">
+                            <ul class="list-group fs-5">
+                                <li class="list-group-item">
+                                    Nasc.: <span>07/02/2003</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Idade: <span id="idade"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    Cidade: <span>Curitiba</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Estado: <span>Paraná</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group fs-5">
+                                <li class="list-group-item">Hobby: <span><i class="bi bi-stars"></i>Foguetes<i class="bi bi-stars"></i></span></li>
+
+                                <li class="list-group-item">Site: 
+                                    <a class="text-decoration-none link-site" href="https://iagorhuda.com/" target="_blank">Iago Rhudá
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item">Trabalho: <a href="https://blueedtech.com.br/"
+                                        target="_blank" class="text-decoration-none link-dark">Searching...</a></li>
+                                <li class="list-group-item">Experiência: <span>+4 anos</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="w-50 me-auto ms-auto">
+
+        <section class="vizualizacao mt-5 cv text-white" id="formacoes">
+
+            <div class="container pb-5">
+                <div class="container pb-6">
+
+                    <h2 class="pt-3 pb-4">Formações</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="cv-title">Educação</h3>
+                            <div class="cv-item" data-anime="up">
+                                <h4>Técnico em Edificações</h4>
+                                <h5>2018-2021</h5>
+                                <p class="nome-colegio">Centro Estadual de Educação Profissional de Curitiba (CEEP)</p>
+                            </div>
+                            <div class="cv-item" data-anime="up">
+                                <h4>Bacharelado em Engenharia de Computação</h4>
+                                <h5>2022-Cursando</h5>
+                                <p class="nome-colegio">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="cv_title">Cursos</h3>
+                            <div class="cv-item" data-anime="up">
+                                <h4>CS50 (Computer Science 50)</h4>
+                                <h5>2022-2022</h5>
+                                <p class="nome-colegio">Harvard and Yale
+                                    University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+        </section>
+
+        <hr class="w-50 me-auto ms-auto">
+
+        <section class="vizualizacao mt-5" id="habilidades">
+
+            <div class="container pb-5 text-white"">
+                <h2 class='pt-5'>Habilidades</h2>
+                <p>Para o desenvolvimento de projetos, acredito que algumas habilidades sejam de extrema importância para o sucesso, e, portanto, procuro cada vez mais me desenvolver em tais habilidades.</p>
+
+                <div class="row"        >
+                    <div class="col-md-6">
+
+                        <p class="mt-3 mb-0">Inglês</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 70%;"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">Python</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+
+                        <p class='mt-3 mb-0'>HTML</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                data-anime="left" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">CSS</p>
+                        <div class="progress">  
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 80%;"
+                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <p class="mt-3 mb-0">JavaScript</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">Flask</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="50">50%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">Bootstrap</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="60">60%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">SQL</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="50">50%</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <hr class='w-50 me-auto ms-auto'>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mt-3 mb-0">Trabalho em equipe</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 94%;"
+                                aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">94%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">Proatividade</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 98%;"
+                                aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98%</div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mt-3 mb-0">Comunicação</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 95%;"
+                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                        </div>
+
+                        <p class="mt-3 mb-0">Comprometimento</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 98%;"
+                                aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98%</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr class="w-50 me-auto ms-auto">
+
+        <section class="vizualizacao pt-5 pb-5" id="download-curriculo">
+
+            <div class="container mb-5">
+
+                <h2 class='pt-3 pb-3 text-white'>Currículo</h2>
+                
+                <div class="row">
+                    <div class="col-md-6" data-anime="left">
+                        <p class="text-white">Para ver e/ou realizar o download de meu currículo atualizado, clique no botão abaixo:</p>
+                        <a class="botao-download" href="CV - Iago Rhudá Ramos.pdf" download="CV - Iago Rhudá Ramos.pdf" type="application/pdf">
+                            Baixar Currículo</a>                    
+                    </div>
+                    <div class="col-md-6" data-anime="up">
+                        <embed src="CV - Iago Rhudá Ramos.pdf" type="application/pdf" width="100%" height="450px">
+                    </div>
+        </section>
+
+        <hr class="w-50 me-auto ms-auto">
+        
+
+        <section id="portfolio" class="section-bg mt-5">
+            <div class="container pb-5 pt-5" data-anime="left">
+                <h2 class="pb-4 text-white">Portfólio</h2>
+
+                <!--indicadores do carrossel-->
+                <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button id="button-indicator" type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button id="button-indicator" type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+
+                    <!--carrossel-->
+                    <div class="carousel-inner">
+                        <!--primeira página do carrossel-->
+                        <div class="carousel-item active" data-bs-interval="10000">
+
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!--primeiro card - primeira página-->
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="img/login.jpeg" class="card-img-top"
+                                            alt="Interface de Login">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Interface de Login</h5>
+                                            <p class="card-text">
+                                                Sistema de login desenvolvido com PySimpleGUI e integração em SQL.
+                                            </p>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                  </svg> Python
+                                            </p>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-add" viewBox="0 0 16 16">
+                                                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
+                                                    <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
+                                                  </svg> SQL
+                                            </p>
+                                            
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/iago-rhuda/Login-Interface" target='_blank'
+                                                    class="btn btn-outline-dark"><i
+                                                    class="bi bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--segundo card - primeira página-->
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="img/site portfolio.jpg" class="card-img-top img-fluid w-100"
+                                            alt="Print do site">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Site Portfólio Pessoal</h5>
+                                            <p class="card-text">Projeto fullstack desenvolvido com Bootstrap, deploy realizado na Netlify.</p>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <!--
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                          </svg> Python
+                                                    </p>
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                          </svg> Flask
+                                                    </p>
+                                                    -->
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                                            <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+                                                            <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+                                                          </svg> Bootstrap
+                                                    </p>
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-js" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM3.186 15.29a1.176 1.176 0 0 1-.111-.449h.765a.578.578 0 0 0 .255.384c.07.049.153.087.249.114.095.028.202.041.319.041.164 0 .302-.023.413-.07a.559.559 0 0 0 .255-.193.507.507 0 0 0 .085-.29.387.387 0 0 0-.153-.326c-.101-.08-.255-.144-.462-.193l-.619-.143a1.72 1.72 0 0 1-.539-.214 1.001 1.001 0 0 1-.351-.367 1.068 1.068 0 0 1-.123-.524c0-.244.063-.457.19-.639.127-.181.303-.322.528-.422.224-.1.483-.149.776-.149.305 0 .564.05.78.152.216.102.383.239.5.41.12.17.186.359.2.566h-.75a.56.56 0 0 0-.12-.258.624.624 0 0 0-.247-.181.923.923 0 0 0-.369-.068c-.217 0-.388.05-.513.152a.472.472 0 0 0-.184.384c0 .121.048.22.143.3a.97.97 0 0 0 .405.175l.62.143c.218.05.406.12.566.211.16.09.285.21.375.358.09.148.135.335.135.56 0 .247-.063.466-.188.656a1.216 1.216 0 0 1-.539.439c-.234.105-.52.158-.858.158-.254 0-.476-.03-.665-.09a1.404 1.404 0 0 1-.478-.252 1.13 1.13 0 0 1-.29-.375Zm-3.104-.033A1.32 1.32 0 0 1 0 14.791h.765a.576.576 0 0 0 .073.27.499.499 0 0 0 .454.246c.19 0 .33-.055.422-.164.092-.11.138-.265.138-.466v-2.745h.79v2.725c0 .44-.119.774-.357 1.005-.236.23-.564.345-.984.345a1.59 1.59 0 0 1-.569-.094 1.145 1.145 0 0 1-.407-.266 1.14 1.14 0 0 1-.243-.39Z"/>
+                                                          </svg> JS
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-css" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM3.397 14.841a1.13 1.13 0 0 0 .401.823c.13.108.289.192.478.252.19.061.411.091.665.091.338 0 .624-.053.859-.158.236-.105.416-.252.539-.44.125-.189.187-.408.187-.656 0-.224-.045-.41-.134-.56a1.001 1.001 0 0 0-.375-.357 2.027 2.027 0 0 0-.566-.21l-.621-.144a.97.97 0 0 1-.404-.176.37.37 0 0 1-.144-.299c0-.156.062-.284.185-.384.125-.101.296-.152.512-.152.143 0 .266.023.37.068a.624.624 0 0 1 .246.181.56.56 0 0 1 .12.258h.75a1.092 1.092 0 0 0-.2-.566 1.21 1.21 0 0 0-.5-.41 1.813 1.813 0 0 0-.78-.152c-.293 0-.551.05-.776.15-.225.099-.4.24-.527.421-.127.182-.19.395-.19.639 0 .201.04.376.122.524.082.149.2.27.352.367.152.095.332.167.539.213l.618.144c.207.049.361.113.463.193a.387.387 0 0 1 .152.326.505.505 0 0 1-.085.29.559.559 0 0 1-.255.193c-.111.047-.249.07-.413.07-.117 0-.223-.013-.32-.04a.838.838 0 0 1-.248-.115.578.578 0 0 1-.255-.384h-.765ZM.806 13.693c0-.248.034-.46.102-.633a.868.868 0 0 1 .302-.399.814.814 0 0 1 .475-.137c.15 0 .283.032.398.097a.7.7 0 0 1 .272.26.85.85 0 0 1 .12.381h.765v-.072a1.33 1.33 0 0 0-.466-.964 1.441 1.441 0 0 0-.489-.272 1.838 1.838 0 0 0-.606-.097c-.356 0-.66.074-.911.223-.25.148-.44.359-.572.632-.13.274-.196.6-.196.979v.498c0 .379.064.704.193.976.131.271.322.48.572.626.25.145.554.217.914.217.293 0 .554-.055.785-.164.23-.11.414-.26.55-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.764a.799.799 0 0 1-.118.363.7.7 0 0 1-.272.25.874.874 0 0 1-.401.087.845.845 0 0 1-.478-.132.833.833 0 0 1-.299-.392 1.699 1.699 0 0 1-.102-.627v-.495ZM6.78 15.29a1.176 1.176 0 0 1-.111-.449h.764a.578.578 0 0 0 .255.384c.07.049.154.087.25.114.095.028.201.041.319.041.164 0 .301-.023.413-.07a.559.559 0 0 0 .255-.193.507.507 0 0 0 .085-.29.387.387 0 0 0-.153-.326c-.101-.08-.256-.144-.463-.193l-.618-.143a1.72 1.72 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.068 1.068 0 0 1-.123-.524c0-.244.063-.457.19-.639.127-.181.303-.322.527-.422.225-.1.484-.149.777-.149.304 0 .564.05.779.152.217.102.384.239.5.41.12.17.187.359.2.566h-.75a.56.56 0 0 0-.12-.258.624.624 0 0 0-.246-.181.923.923 0 0 0-.37-.068c-.216 0-.387.05-.512.152a.472.472 0 0 0-.184.384c0 .121.047.22.143.3a.97.97 0 0 0 .404.175l.621.143c.217.05.406.12.566.211.16.09.285.21.375.358.09.148.135.335.135.56 0 .247-.063.466-.188.656a1.216 1.216 0 0 1-.539.439c-.234.105-.52.158-.858.158-.254 0-.476-.03-.665-.09a1.404 1.404 0 0 1-.478-.252 1.13 1.13 0 0 1-.29-.375Z"/>
+                                                          </svg> CSS
+                                                    </p>
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-html" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5Zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662H6.515Zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999h.706Zm4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z"/>
+                                                          </svg> HTML
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/iago-rhuda/portfolio-site"
+                                                    target='_blank' class="btn btn-outline-dark me-3"><i
+                                                        class="bi bi-github"></i></a>
+                                                <a href="https://iagorhuda.com" target='_blank'
+                                                    class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--terceiro card - primeira página-->
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="img/TicTacToe.png" class="card-img-top img-fluid w-100"
+                                            alt="Imagem do Jogo">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Jogo da Velha c/ I.A.</h5>
+                                            <p class="card-text">Projeto criado em Python utilizando o método MiniMax para a I.A..</p>
+                                            <div class="row">
+                                                <div class="md-12">
+                                                    <p>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                          </svg> Python
+                                                    </p>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/iago-rhuda/tic-tac-toe-artificial-intelligence" target='_blank'
+                                                    class="btn btn-outline-dark me-3"><i class="bi bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--segunda página do carrossel-->
+                        <div class="carousel-item" data-bs-interval="2000">
+
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                                <!--primeiro card - segunda página-->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="img/coming-soon.png" class="card-img-top img-fluid w-100"
+                                            alt="Imagem da Interface Gráfica">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sudoku</h5>
+                                            <p class="card-text">Interface Gráfica do jogo Sudoku</p>
+                                            <div class="md-12">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                      </svg> Python
+                                                </p>
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                      </svg> Kivy
+                                                </p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--segundo card - segunda página-->
+
+                                <!--
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="img/coming-soon.png" class="card-img-top img-fluid w-100"
+                                            alt="Coming Soon">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Assistente Virtual Python</h5>
+                                            <p class="card-text">
+                                                Assistente virtual construído em Python
+                                            </p>
+                                            <div class="md-12">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                      </svg> Python
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                                <!--terceiro card - segunda página-->
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="img/coming-soon.png" class="card-img-top img-fluid w-100"
+                                            alt="Coming Soon">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Calculadora de IRA</h5>
+                                            <p class="card-text">Interface Gráfica para o cálculo do IRA (Índice de Rendimento Acadêmico)</p>
+                                            <div class="md-12">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                                                      </svg> Python
+                                                </p>
+                                                <p> 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-add" viewBox="0 0 16 16">
+                                                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
+                                                        <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
+                                                      </svg> SQL
+                                                </p>    
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    <!--controle do carrossel-->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        
+        <hr class="w-50 me-auto ms-auto">
+
+        <section class="vizualizacao pt-5 pb-5" id="contato">
+
+            <div class="container mb-5">
+                <h2 class='pt-3 pb-3 text-white'>Contato</h2>
+
+                <div class="row contato-cards">
+
+                    <div class="col-md-6">
+                        <div class="card p-5 shadow border-0" data-anime="up">
+
+                            <h4><i class="bi bi-envelope"></i> Email:</h4>
+                            <p>iagorhuraramos@gmail.com</p>
+
+                            <h4><i class="bi bi-whatsapp"></i> 
+                                <i class="bi bi-telegram"></i> 
+                                <i class="bi bi-telephone-plus"></i> Celular:</h4>
+                            <p>(41) 9 9644-6112</p>
+                            <a class="botao social-links-whatsapp" href="https://wa.me/996446112" target="_blank">Envie uma Mensagem</a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <div class="card p-5 h-100 shadow border-0" data-anime="left">
+
+                            <h4><i class="bi bi-github"></i> GitHub:</h4>
+                            <a class="botao social-links-github" href="https://github.com/iago-rhuda" target="_blank">Acessar</a>
+
+                            <h4 class="margem-top"><i class="bi bi-linkedin"></i> Linkedin:</h4>
+                            <a class="botao social-links-linkedin" href="https://www.linkedin.com/in/iago-rhuda-ramos/" target="_blank">Acessar</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <!--
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                &copy; Copyright <strong>Iago Rhudá Ramos</strong>
+            </div>
+        </div>
+    </footer>
+    -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

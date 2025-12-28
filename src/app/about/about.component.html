@@ -51,14 +51,31 @@
                 <!-- Bottom Section: Hobbies Grid -->
                 <div class="col-md-12 hobbies-section">
                     <h3 class="subsection-title">{{ 'HOBBIES' | translate }}</h3>
-                    <div class="hobbies-grid">
+
+                    <!-- Desktop Grid (Original) -->
+                    <div class="hobbies-desktop-container">
                         <div class="hobby-card" *ngFor="let hobby of hobbies">
                             <div class="hobby-header">
                                 <i class="bi" [ngClass]="hobby.icon"></i>
                                 <span>{{ hobby.key | translate }}</span>
                             </div>
+                            <div class="hobby-topics">
+                                <div class="topic-item" *ngFor="let topic of hobby.topics">
+                                    <span class="topic-label">{{ topic.label | translate }}:</span>
+                                    <span class="topic-value">{{ topic.value | translate }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                            <!-- Detailed Topics Structure -->
+                    <!-- Mobile Infinite Carousel (Triplicated List) -->
+                    <div class="hobbies-mobile-container" (scroll)="onScroll($event)" (mouseenter)="pauseAutoPlay()"
+                        (mouseleave)="resumeAutoPlay()" (touchstart)="pauseAutoPlay()" (touchend)="resumeAutoPlay()">
+                        <div class="hobby-card" *ngFor="let hobby of infiniteHobbies">
+                            <div class="hobby-header">
+                                <i class="bi" [ngClass]="hobby.icon"></i>
+                                <span>{{ hobby.key | translate }}</span>
+                            </div>
                             <div class="hobby-topics">
                                 <div class="topic-item" *ngFor="let topic of hobby.topics">
                                     <span class="topic-label">{{ topic.label | translate }}:</span>

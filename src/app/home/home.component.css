@@ -4,7 +4,7 @@
 }
 
 .name {
-    color: #FFFFFF;
+    color: var(--text-primary);
     font-family: var(--font-head);
     font-size: 3.5rem;
     font-weight: 800;

@@ -112,3 +112,23 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.8rem 1rem;
+    /* Reduce padding */
+    justify-content: flex-end;
+    /* Align right */
+  }
+
+  .dynamic-name {
+    display: none;
+    /* Hide name completely on mobile */
+  }
+
+  /* Only show flag in dropdown button on mobile if needed, or keeping it but smaller text */
+  .lang-btn {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

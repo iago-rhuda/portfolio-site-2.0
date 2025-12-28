@@ -9,14 +9,13 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 
     position: fixed;
-    bottom: 30px;
-    /* Slightly raised */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
     /* Fluid width based on content */
     min-width: 300px;
-    max-width: 95%;
+    max-width: 95vw;
     /* Increased max-width */
     padding: 10px 20px;
     /* Reduced padding */
@@ -27,8 +26,25 @@
     justify-content: space-between;
     gap: 1rem;
     /* Reduced gap */
-    z-index: 1000;
+    z-index: 9999;
+    /* Ensure it's on top */
     transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar:hover {
@@ -75,12 +91,6 @@
     transform: translateX(-50%) translateY(0);
 }
 
-.navbar a:hover::after {
-    opacity: 1;
-    /* text appears */
-}
-
-/* end subtitle config (text) */
 
 /* icons config */
 .navbar i {
@@ -101,7 +111,6 @@
 .navbar a.active i {
     color: var(--accent-color);
     transform: scale(1.3);
-    /* text-shadow: 0 0 10px var(--accent-color); Given user feedback removed */
 }
 
 .navbar a.active::before {
@@ -114,5 +123,55 @@
     height: 6px;
     background-color: var(--accent-color);
     border-radius: 50%;
-    /* box-shadow: 0 0 8px var(--accent-color); Given user feedback removed */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        bottom: 20px !important;
+        /* Force bottom position */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        padding: 10px 15px;
+        width: auto;
+        min-width: unset;
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 90vw;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+        opacity: 1;
+    }
+
+    /* Hide tooltips on mobile */
+    .navbar a::after {
+        display: none;
+    }
+
+    /* Different active indicator for vertical list */
+    .navbar a.active::before {
+        display: none;
+        /* simple highlight */
+    }
+
+    .navbar a.active i {
+        color: var(--accent-color);
+        text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
+    }
 }

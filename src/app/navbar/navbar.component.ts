@@ -9,6 +9,7 @@ import { Component, HostListener } from '@angular/core';
 
 export class NavbarComponent {
   secaoAtiva: string = 'HOME';
+  isMenuOpen: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
@@ -18,6 +19,11 @@ export class NavbarComponent {
 
   setSecaoAtiva(secao: string) {
     this.secaoAtiva = secao;
+    this.isMenuOpen = false; // Close menu on selection
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   private detectarSecaoAtiva() {

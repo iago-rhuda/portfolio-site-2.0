@@ -76,4 +76,102 @@ export class AboutComponent {
       ]
     }
   ];
+
+  // Carousel Logic
+  // Carousel Logic
+  carouselContainer: HTMLElement | null = null;
+  autoPlayInterval: any;
+  isPaused = false;
+
+  // Triplicated list for infinite loop effect: [Set1, Set2 (Middle), Set3]
+  get infiniteHobbies() {
+    return [...this.hobbies, ...this.hobbies, ...this.hobbies];
+  }
+
+  ngAfterViewInit() {
+    this.carouselContainer = document.querySelector('.hobbies-mobile-container');
+    if (this.carouselContainer) {
+      // Center initially to the middle set
+      // We need to wait for render, setTimeout is a crude but effective way here
+      setTimeout(() => {
+        this.resetScrollPosition();
+        this.startAutoPlay();
+      }, 100);
+    }
+  }
+
+  ngOnDestroy() {
+    this.stopAutoPlay();
+  }
+
+  startAutoPlay() {
+    this.stopAutoPlay();
+    this.autoPlayInterval = setInterval(() => {
+      // Check if mobile view is active (simple width check)
+      if (!this.isPaused && this.carouselContainer && window.innerWidth <= 768) {
+        this.scrollNext();
+      }
+    }, 3500);
+  }
+
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+    }
+  }
+
+  pauseAutoPlay() {
+    this.isPaused = true;
+  }
+
+  resumeAutoPlay() {
+    this.isPaused = false;
+  }
+
+  scrollNext() {
+    if (!this.carouselContainer) return;
+
+    const container = this.carouselContainer;
+    const cardWidth = this.getCardWidth(container);
+
+    // Smooth scroll to next
+    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  }
+
+  // Handle the infinite loop "Silent Jump"
+  onScroll(event: any) {
+    const container = event.target;
+    // Deboucing or check thresholds
+    // Total sets = 3. 
+    // If we are in Set 1 (near start), jump to Set 2.
+    // If we are in Set 3 (near end), jump to Set 2.
+
+    const totalWidth = container.scrollWidth;
+    const setWidth = totalWidth / 3;
+
+    // Threshold: if we scroll closely to the start (Set 1)
+    if (container.scrollLeft < 50) {
+      // Jump forward to Set 2 (same relative position)
+      container.scrollLeft += setWidth;
+    }
+    // Threshold: if we scroll past Set 2 into Set 3
+    else if (container.scrollLeft > setWidth * 2) {
+      // Jump back to Set 2
+      container.scrollLeft -= setWidth;
+    }
+  }
+
+  private getCardWidth(container: HTMLElement): number {
+    const card = container.querySelector('.hobby-card');
+    // card width + gap. Gap is 1rem (16px) computed style
+    return (card?.clientWidth || 0) + 16;
+  }
+
+  private resetScrollPosition() {
+    if (this.carouselContainer) {
+      const totalWidth = this.carouselContainer.scrollWidth;
+      // Start at the beginning of the MIDDLE set (Set 2)
+      this.carouselContainer.scrollLeft = totalWidth / 3;
+    }
+  }
 }

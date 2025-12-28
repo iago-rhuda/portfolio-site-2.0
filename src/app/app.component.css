@@ -8,36 +8,17 @@
     font-family: 'JetBrains Mono', monospace;
 }
 
-.name {
-    color: #212529;
-}
-
-.title {
-    font-size: large;
-}
-
 /* END OF HOME CONFIG */
 
 /* ABOUT ME CONFIG*/
 #ABOUT {
     font-family: 'JetBrains Mono', monospace;
-    height: 100vh;
-    padding-top: 4rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-#ABOUT img {
-    height: 15rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: #212529 solid 3px;
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
-}
-
-#ABOUT p {
-    margin: 1rem 0; /* Add some margin to the paragraphs for spacing */
+    padding: 2rem;
 }
 
 /* END OF ABOUT ME CONFIG */
@@ -45,41 +26,24 @@
 /* QUALIFICATIONS CONFIG */
 #QUALIFICATIONS {
     font-family: 'JetBrains Mono', monospace;
-    height: 100vh;
-    padding-top: 10rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    align-items: center;
-}
-
-.qualifications {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 /* END OF QUALIFICATIONS CONFIG */
 
 /* SKILLS CONFIG */
 #SKILLS {
-    height: 100vh;
-    padding-top: 4rem;
-}
-
-.container {
-    font-family: 'JetBrains Mono', monospace;
-    margin: 2rem;
-}
-
-.col1 h2,
-.col1 p {
-    text-align: left;
-    margin-left: 10rem;
-}
-
-.progress-bar {
-    color: #ced4da;
-    background-color: #495057;
-    width: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 /* END OF SKILLS CONFIG */
@@ -87,37 +51,38 @@
 /* PORTFOLIO CONFIG */
 #PORTFOLIO {
     font-family: 'JetBrains Mono', monospace;
-    height: 100vh;
-    padding-top: 4rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 /* END OF PORTFOLIO CONFIG */
 
+/* ARTICLES CONFIG */
+#ARTICLES {
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* END OF ARTICLES CONFIG */
+
 /* CURRICULUM CONFIG */
 #CURRICULUM {
     font-family: 'JetBrains Mono', monospace;
-    height: 100vh;
-    padding-top: 4rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-.div-button {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-#download-btn {
-    color: #212529;
-}
-#download-btn:hover {
-    color: #ced4da;
-    background-color: #212529;
-}
-
-.margin-button {
-    margin: 3rem;
+    padding: 2rem;
 }
 
 /* END OF CURRICULUM CONFIG */
@@ -125,44 +90,12 @@
 /* CONTACT CONFIG */
 #CONTACT {
     font-family: 'JetBrains Mono', monospace;
-    height: 100vh;
-    padding-top: 7rem;
-    padding-left: 6rem;
-    padding-right: 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-.card {
-    background-color: #CED4DA;
-    border: #6c757d solid 1px;
-    height: 13rem;
-    width: 30rem;
-}
 /* END OF CONTACT CONFIG */
-
-/* ANIMATIONS CONFIG */
-[data-anime] {
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-}
-
-[data-anime="down"] {
-    transform: translate3d(0, -100%, 0);
-}
-
-[data-anime="up"] {
-    transform: translate3d(0, 100%, 0);
-}
-
-[data-anime="left"] {
-    transform: translate3d(-100%, 0, 0);
-}
-
-[data-anime="right"] {
-    transform: translate3d(100%, 0, 0);
-}
-
-[data-anime].animate {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
-/* END OF ANIMATIONS CONFIG */

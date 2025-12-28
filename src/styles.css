@@ -1,23 +1,127 @@
-/* Pequenas Telas: até 768px
-Celular: de 600px até 768px
-Tablets: 768px até 992px
-Desktop: de 992px até 1200px
-Grandes Telas: acima de 1200px */
+/* Modern Dark Theme Variables */
+:root {
+    --bg-primary: #0B0B0C;
+    /* Deep Dark (BG) */
+    --bg-secondary: #27272E;
+    /* Tech Grey (Cards/Borders) */
+    --bg-tertiary: #3A3B3C;
+    /* Slightly lighter for borders/hover */
+    --text-primary: #FFFFFF;
+    /* White (High Contrast) */
+    --text-secondary: #6C757D;
+    /* Subtle Text */
+    --accent-color: #7290FF;
+    /* Primary Accent (Light Logic Blue) */
+    --accent-hover: #94A9FF;
+    /* Even lighter accent for hover */
+    --success-color: #03DAC6;
+    --warning-color: #CF6679;
 
+    --font-heading: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --transition-speed: 0.3s;
+}
+
+.light-theme {
+    --bg-primary: #FFFFFF;
+    /* Main Background (Pure White) */
+    --bg-secondary: #F3F4F6;
+    /* Section/Card BG (Icy Grey) */
+    --bg-tertiary: #E5E7EB;
+    /* Light border gray */
+    --text-primary: #111827;
+    /* Primary Text (Quase preto) */
+    --text-secondary: #4B5563;
+    /* Secondary Text */
+    --accent-color: #2E5BFF;
+    /* The Logic Blue (Consistent) */
+    --accent-hover: #1A44D1;
+    /* Darker blue for light mode hover */
+}
 
 body {
-    background-color: #CED4DA;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
-/* scrollbar config */
-*::-webkit-scrollbar{
-    width: 5px;
-  }
-  *::-webkit-scrollbar-track{
-    width: 12px;
-    background-color: #ced4da;
-  }
-  *::-webkit-scrollbar-thumb{
-    background-color: #212529;
-    border-radius: 3px;
-  }
-/* end of scrollbar config */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Global Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Animations Config */
+[data-anime] {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+[data-anime="down"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="up"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}

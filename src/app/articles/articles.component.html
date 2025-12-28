@@ -1,0 +1,25 @@
+<div class="articles-container">
+    <div class="header">
+        <h2 data-anime="down">{{ 'ARTICLES' | translate }}</h2>
+        <p data-anime="down">{{ 'ARTICLES_TEXT' | translate }}</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let article of articles" data-anime="up">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title | translate }}</h5>
+                    <p class="card-text">{{ article.description | translate }}</p>
+                    <div class="lang-badge">{{ article.lang | uppercase }}</div>
+
+                    <a *ngIf="!article.pending" [href]="article.link" target="_blank" class="btn-read">
+                        {{ 'ACCESS' | translate }} <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                    <button *ngIf="article.pending" class="btn-read pending" disabled>
+                        {{ 'LINK_PENDING' | translate }} <i class="bi bi-hourglass-split"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.div-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-button {
+    margin: 2rem;
+}
+
+button {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(187, 134, 252, 0.1);
+    /* Subtle tint */
+    transform: translateY(-2px);
+}
+
+svg {
+    fill: currentColor;
+}

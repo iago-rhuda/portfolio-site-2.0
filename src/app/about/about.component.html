@@ -1,0 +1,74 @@
+<div class="row about-container" data-anime="up">
+    <div class="col-md-12">
+        <div class="about-card">
+            <div class="row align-items-center">
+                <!-- Top Section: Image & Bio -->
+                <div class="col-md-12 top-section mb-4">
+                    <div class="row align-items-center">
+                        <!-- Image Column (Left) -->
+                        <div class="col-md-3 text-center mb-4 mb-md-0">
+                            <div class="image-wrapper">
+                                <img src="../assets/img/imagem - Iago.png" class="img-fluid profile-img"
+                                    alt="Foto do Iago">
+                            </div>
+                        </div>
+
+                        <!-- Bio Content (Right) -->
+                        <div class="col-md-9">
+                            <h2 class="section-title">{{ 'ABOUT' | translate }}</h2>
+                            <p class="about-text main-intro" [innerHTML]="'ABOUT ME' | translate"></p>
+
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="label"><i class="bi bi-calendar-event"></i> {{ 'BIRTH' | translate
+                                        }}:</span>
+                                    <span class="value">{{ getFormattedDate() }} | {{ calculateAge() }} {{ 'YEARS' |
+                                        translate }}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="bi bi-geo-alt-fill text-danger"></i> Local:</span>
+                                    <span class="value">Curitiba, Paraná, {{ 'BRAZIL' | translate }}</span>
+                                </div>
+                                <div class="info-item resume-container">
+                                    <span class="label highlight-label"><i
+                                            class="bi bi-file-earmark-arrow-down-fill"></i> Download CV:</span>
+                                    <div class="resume-buttons">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a href="../assets/CV - Iago Rhudá Ramos.pdf"
+                                                download="CV - Iago Rhudá Ramos.pdf" class="btn btn-download">PT</a>
+                                            <a href="../assets/CV - Iago Rhudá Ramos.pdf"
+                                                download="CV - Iago Rhudá Ramos.pdf" class="btn btn-download">EN</a>
+                                            <a href="../assets/CV - Iago Rhudá Ramos.pdf"
+                                                download="CV - Iago Rhudá Ramos.pdf" class="btn btn-download">FR</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section: Hobbies Grid -->
+                <div class="col-md-12 hobbies-section">
+                    <h3 class="subsection-title">{{ 'HOBBIES' | translate }}</h3>
+                    <div class="hobbies-grid">
+                        <div class="hobby-card" *ngFor="let hobby of hobbies">
+                            <div class="hobby-header">
+                                <i class="bi" [ngClass]="hobby.icon"></i>
+                                <span>{{ hobby.key | translate }}</span>
+                            </div>
+
+                            <!-- Detailed Topics Structure -->
+                            <div class="hobby-topics">
+                                <div class="topic-item" *ngFor="let topic of hobby.topics">
+                                    <span class="topic-label">{{ topic.label | translate }}:</span>
+                                    <span class="topic-value">{{ topic.value | translate }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

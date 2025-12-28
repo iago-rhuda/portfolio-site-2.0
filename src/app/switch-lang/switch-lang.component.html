@@ -1,22 +1,43 @@
-<!--
-  <div class="language-buttons">
-    <div class="button-container">
-      <button *ngFor="let option of options" (click)="onChange(option.value)"
-      [class.selected]="translate.currentLang === option.value">
-      {{ option.display }}
-    </button>
-  </div>
-</div>
--->
+<div class="header-container">
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Languages
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">ENGLISH</a></li>
-    <li><a class="dropdown-item" href="#">PORTUGUÊS</a></li>
-    <li><a class="dropdown-item" href="#">FRANÇAIS</a></li>
-    <li><a class="dropdown-item" href="#">ITALIANO</a></li>
-  </ul>
+  <!-- Left Side: Dynamic Name -->
+  <div class="dynamic-name" [class.visible]="showName">
+    Iago Rhudá Ramos
+  </div>
+
+  <!-- Right Side Container -->
+  <div class="right-container">
+
+    <!-- Social Media Icons -->
+    <a href="https://github.com/iago-rhuda" target="_blank" class="social-btn" title="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/iago-rhuda-ramos/" target="_blank" class="social-btn" title="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-btn" (click)="toggleTheme()"
+      [title]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+      <i class="bi" [ngClass]="isDarkMode ? 'bi-sun-fill' : 'bi-moon-fill'"></i>
+    </button>
+
+    <!-- Language Dropdown -->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle lang-btn" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <i class="bi bi-globe"></i> {{ getFlag() }} {{ translate.currentLang | uppercase }}
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li *ngFor="let option of options">
+          <a class="dropdown-item" href="javascript:void(0)" (click)="onChange(option.value)"
+            [class.active]="translate.currentLang === option.value">
+            {{ option.flag }} {{ option.display | uppercase }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
 </div>

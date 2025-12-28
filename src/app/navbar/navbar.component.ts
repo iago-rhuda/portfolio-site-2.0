@@ -21,7 +21,7 @@ export class NavbarComponent {
   }
 
   private detectarSecaoAtiva() {
-    const secoes = ['HOME', 'ABOUT', 'QUALIFICATIONS', 'SKILLS', 'PORTFOLIO', 'CURRICULUM', 'CONTACT'];
+    const secoes = ['HOME', 'ABOUT', 'QUALIFICATIONS', 'SKILLS', 'PORTFOLIO', 'ARTICLES', 'CURRICULUM', 'CONTACT'];
 
     for (const secao of secoes) {
       const elemento = document.getElementById(secao);

@@ -13,12 +13,13 @@ export class AppComponent {
   constructor(
     private translate: TranslateService,
   ) {
-    this.translate.addLangs(['en', 'pt', 'fr', 'it']);
+    this.translate.addLangs(['en', 'pt', 'fr', 'it', 'es', 'de', 'ko', 'ja', 'zh']);
     const lang = this.translate.getBrowserLang();
-    if (lang != 'en' && lang != 'pt' && lang != 'it' && lang != 'fr') {
-      this.translate.setDefaultLang('en');
-    } else {
+    const supported = ['en', 'pt', 'fr', 'it', 'es', 'de', 'ko', 'ja', 'zh'];
+    if (lang && supported.includes(lang)) {
       this.translate.use(lang);
+    } else {
+      this.translate.setDefaultLang('en');
     }
   }
 

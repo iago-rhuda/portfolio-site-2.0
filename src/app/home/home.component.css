@@ -1,42 +1,159 @@
 :host {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
-.name {
-    color: var(--text-primary);
-    font-family: var(--font-head);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* ============================================================
+   AVAILABILITY BADGE
+   ============================================================ */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(52, 199, 89, 0.1);
+  border: 1px solid rgba(52, 199, 89, 0.25);
+  color: #34c759;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
 }
 
-.title {
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
-    font-weight: 400;
-    opacity: 0.9;
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
 }
 
-@media (max-width: 768px) {
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .title {
-        font-size: 1.2rem;
-    }
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(52, 199, 89, 0); }
 }
 
-.subtitle {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    font-weight: 300;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+/* ============================================================
+   NAME — Apple gradient text animation
+   ============================================================ */
+.hero-name {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+
+  /* Animated gradient */
+  background: linear-gradient(
+    135deg,
+    #f5f5f7 0%,
+    #7290FF 35%,
+    #94A9FF 50%,
+    #f5f5f7 65%,
+    #7290FF 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 6s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* Light mode: darker gradient */
+.light-theme .hero-name {
+  background: linear-gradient(
+    135deg,
+    #1d1d1f 0%,
+    #2E5BFF 35%,
+    #7290FF 50%,
+    #1d1d1f 65%,
+    #2E5BFF 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================================
+   TITLE & SUBTITLE
+   ============================================================ */
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ============================================================
+   CTA BUTTONS
+   ============================================================ */
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn-apple {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* ============================================================
+   SCROLL INDICATOR
+   ============================================================ */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-tertiary);
+  animation: scroll-bounce 2.5s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  .hero-name    { font-size: 2.4rem; }
+  .hero-title   { font-size: 0.95rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-cta     { gap: 0.75rem; }
 }

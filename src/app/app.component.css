@@ -1,101 +1,39 @@
-/* HOME CONFIG */
+/* All sections now get padding from global styles.css section rule */
+/* Individual overrides only where needed */
+
 #HOME {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
+  height: 100vh;
+  min-height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-/* END OF HOME CONFIG */
-
-/* ABOUT ME CONFIG*/
-#ABOUT {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+/* Ambient background glow for hero */
+#HOME::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(114, 144, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* END OF ABOUT ME CONFIG */
+#HOME > * { position: relative; z-index: 1; }
 
-/* QUALIFICATIONS CONFIG */
-#QUALIFICATIONS {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
+/* ABOUT: let section padding handle spacing */
+#ABOUT    { background: var(--bg-primary); }
+#QUALIFICATIONS { background: var(--bg-secondary); }
+#SKILLS   { background: var(--bg-primary); }
+#ARTICLES { background: var(--bg-secondary); }
+#CONTACT  { background: var(--bg-primary); }
 
-/* END OF QUALIFICATIONS CONFIG */
-
-/* SKILLS CONFIG */
-#SKILLS {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* END OF SKILLS CONFIG */
-
-/* PORTFOLIO CONFIG */
-#PORTFOLIO {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* END OF PORTFOLIO CONFIG */
-
-/* ARTICLES CONFIG */
-#ARTICLES {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* END OF ARTICLES CONFIG */
-
-/* CURRICULUM CONFIG */
-#CURRICULUM {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* END OF CURRICULUM CONFIG */
-
-/* CONTACT CONFIG */
-#CONTACT {
-    font-family: 'JetBrains Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* END OF CONTACT CONFIG */
+/* Alternating bg creates subtle Apple-like rhythm */

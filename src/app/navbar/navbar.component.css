@@ -1,177 +1,174 @@
+/* ============================================================
+   NAVBAR — Apple-like floating pill
+   ============================================================ */
 .navbar {
-    font-family: 'JetBrains Mono', monospace;
-    /* Glassmorphism Effect */
-    background-color: color-mix(in srgb, var(--bg-secondary), transparent 15%);
-    /* Semi-transparent theme color */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--bg-tertiary);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-heading);
+  background: color-mix(in srgb, var(--bg-secondary) 70%, transparent);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--bg-glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255,255,255,0.05) inset;
 
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    /* Fluid width based on content */
-    min-width: 300px;
-    max-width: 95vw;
-    /* Increased max-width */
-    padding: 10px 20px;
-    /* Reduced padding */
-    border-radius: 15px;
-    /* Slightly rounded corners instead of pill */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    /* Reduced gap */
-    z-index: 9999;
-    /* Ensure it's on top */
-    transition: all 0.3s ease;
-}
-
-.hamburger {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--text-primary);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  min-width: 280px;
+  max-width: 92vw;
+  padding: 10px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  z-index: 9999;
+  transition: box-shadow 0.35s var(--ease-apple), transform 0.35s var(--ease-apple);
 }
 
 .navbar:hover {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-    transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55), 0 1px 0 rgba(255,255,255,0.07) inset;
+  transform: translateX(-50%) translateY(-3px);
 }
 
-/* subtitle config (text) */
+/* ── Nav Links ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: color 0.2s;
+}
+
+.hamburger:hover { color: var(--text-primary); }
+
+/* ── Nav Icon Links ── */
 .navbar a {
-    display: inline-block;
-    position: relative;
-    color: var(--text-secondary);
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.3s;
-    font-size: 16px;
-    transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--text-secondary);
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: color 0.25s var(--ease-apple), background 0.25s var(--ease-apple);
 }
 
+.navbar a:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Tooltip */
 .navbar a::after {
-    content: attr(data-target);
-    position: absolute;
-    top: -45px;
-    /* Adjusted tooltip position */
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: var(--accent-color);
-    /* Use accent color */
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    pointer-events: none;
-    white-space: nowrap;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  content: attr(data-target);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  visibility: hidden;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  border: 1px solid var(--bg-glass-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s var(--ease-apple), transform 0.2s var(--ease-apple), visibility 0.2s;
 }
 
 .navbar a:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
-
-/* icons config */
+/* Icons */
 .navbar i {
-    font-size: 24px;
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    color: var(--text-secondary);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s var(--ease-spring), color 0.25s var(--ease-apple);
 }
 
 .navbar a:hover i {
-    transform: scale(1.2);
-    /* Smooth scaling */
-    color: var(--accent-color);
+  transform: scale(1.15);
+  color: var(--accent-color);
+}
+
+/* Active state */
+.navbar a.active {
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 10%, transparent);
 }
 
 .navbar a.active i {
-    color: var(--accent-color);
-    transform: scale(1.3);
+  color: var(--accent-color);
+  transform: scale(1.2);
 }
 
+/* Active dot indicator */
 .navbar a.active::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-glow);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        bottom: 20px !important;
-        /* Force bottom position */
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        padding: 10px 15px;
-        width: auto;
-        min-width: unset;
-        flex-direction: column-reverse;
-        align-items: center;
-        max-width: 90vw;
-    }
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .navbar {
+    bottom: 16px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    min-width: unset;
+    width: auto;
+    max-width: 88vw;
+  }
 
-    .hamburger {
-        display: block;
-        padding: 5px;
-    }
+  .hamburger { display: flex; }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding-bottom: 1rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-apple);
+  }
 
-    .nav-links.show {
-        display: flex;
-        opacity: 1;
-    }
+  .nav-links.show {
+    display: flex;
+    opacity: 1;
+  }
 
-    /* Hide tooltips on mobile */
-    .navbar a::after {
-        display: none;
-    }
-
-    /* Different active indicator for vertical list */
-    .navbar a.active::before {
-        display: none;
-        /* simple highlight */
-    }
-
-    .navbar a.active i {
-        color: var(--accent-color);
-        text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
-    }
+  .navbar a::after { display: none; }
+  .navbar a.active::before { display: none; }
 }

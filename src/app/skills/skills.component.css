@@ -1,157 +1,144 @@
+/* ============================================================
+   SKILLS — Apple glass cards
+   ============================================================ */
+
 .skills-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section-title {
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Card Style (Universal) */
+/* ── Skill Card ── */
 .skill-card {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--bg-tertiary);
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    /* Align top for multi-line tags */
-    gap: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    margin-bottom: 1rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-apple), border-color 0.3s;
+  margin-bottom: 0.85rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255,255,255,0.12);
 }
 
+/* Icon / Flag */
 .card-icon,
 .lang-flag {
-    font-size: 2rem;
-    color: var(--accent-color);
-    line-height: 1;
-    min-width: 40px;
-    /* Ensure space */
-    display: flex;
-    justify-content: center;
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  line-height: 1;
+  min-width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lang-flag {
-    font-size: 2.5rem;
-    /* Flags usually need to be bigger */
-    filter: grayscale(0.2);
+  font-size: 2.2rem;
+  filter: grayscale(0.15);
+  transition: filter 0.25s;
 }
 
-.skill-card:hover .lang-flag {
-    filter: none;
-}
+.skill-card:hover .lang-flag { filter: none; }
 
+/* Content */
 .card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .card-content h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    font-weight: 600;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
+.main-card-title { margin-bottom: 0.4rem; }
+
+/* Tech tags */
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
 }
 
 .skill-tag {
-    background-color: var(--bg-tertiary);
-    color: var(--text-secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .skill-card:hover .skill-tag {
-    background-color: var(--bg-primary);
-    color: var(--accent-color);
-    border-color: rgba(var(--accent-color-rgb), 0.3);
+  color: color-mix(in srgb, var(--text-secondary) 60%, var(--accent-color));
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.1);
 }
 
-/* Badge Styles for Languages */
+/* Level badges */
 .badge {
-    display: inline-block;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    width: fit-content;
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 100px;
+  width: fit-content;
 }
 
-.badge.native {
-    background-color: rgba(3, 218, 198, 0.1);
-    color: var(--success-color);
-}
+.badge.native       { background: rgba(52,199,89,0.1);   color: #34c759; border: 1px solid rgba(52,199,89,0.2); }
+.badge.advanced     { background: rgba(114,144,255,0.1); color: var(--accent-color); border: 1px solid rgba(114,144,255,0.2); }
+.badge.intermediate { background: rgba(255,214,10,0.1);  color: #ffd60a; border: 1px solid rgba(255,214,10,0.2); }
 
-.badge.advanced {
-    background-color: rgba(114, 144, 255, 0.1);
-    color: var(--accent-color);
-}
-
-.badge.intermediate {
-    background-color: rgba(255, 193, 7, 0.1);
-    color: #FFC107;
-}
-
-.mt-4 {
-    margin-top: 2rem !important;
-}
-
-.mt-3 {
-    margin-top: 1rem !important;
-}
-
-@media (max-width: 768px) {
-    .mobile-mt {
-        margin-top: 2rem;
-    }
-
-    .skill-card {
-        padding: 1.25rem;
-    }
-}
-
-/* Sub-sections within a card (e.g. Python Ecosystem) */
-.sub-skill-section {
-    margin-top: 1rem;
-    width: 100%;
-}
+/* Sub-sections */
+.sub-skill-section { margin-top: 0.85rem; width: 100%; }
 
 .sub-skill-title {
-    font-size: 0.95rem;
-    color: var(--accent-color);
-    opacity: 0.9;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
 }
 
-.main-card-title {
-    margin-bottom: 0.5rem;
+.mt-4 { margin-top: 2rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+
+@media (max-width: 768px) {
+  .mobile-mt { margin-top: 1.75rem; }
+  .skill-card { padding: 1.1rem; gap: 1rem; }
 }

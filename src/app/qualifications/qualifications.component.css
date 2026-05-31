@@ -1,115 +1,121 @@
-/* Timeline Container */
+/* ============================================================
+   QUALIFICATIONS — Apple timeline redesign
+   ============================================================ */
+
 .timeline-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
 }
 
-/* Vertical Line */
+/* Vertical accent line */
 .timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20px;
-    /* Adjust according to marker size */
-    height: 100%;
-    width: 2px;
-    background: var(--accent-color);
-    opacity: 0.3;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: calc(100% - 10px);
+  width: 1.5px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color) 0%, transparent)
+  );
+  opacity: 0.35;
 }
 
-/* Timeline Item */
+/* ── Timeline Item ── */
 .timeline-item {
-    position: relative;
-    margin-bottom: 2.5rem;
-    padding-left: 60px;
-    /* Space for marker and line */
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 58px;
 }
 
-/* Marker Dot */
+/* Marker dot */
 .timeline-marker {
-    position: absolute;
-    left: 11px;
-    /* Center on line (20px left + 2px width / 2 - 10px marker / 2 aprox) -> actually 20px is line left. marker center should be 21px. Line is at 20px, width 2px. Center 21px. Marker 20px. Left 11px. */
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--bg-primary);
-    border: 3px solid var(--accent-color);
-    z-index: 2;
-    transition: all 0.3s ease;
+  position: absolute;
+  left: 11px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-color);
+  z-index: 2;
+  transition: background 0.3s var(--ease-apple), box-shadow 0.3s var(--ease-apple);
 }
 
 .timeline-item:hover .timeline-marker {
-    background-color: var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color);
+  background: var(--accent-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color) 20%, transparent);
 }
 
-/* Content Card */
+/* Content card */
 .timeline-content {
-    background: var(--bg-secondary);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--bg-tertiary);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-apple), border-color 0.3s;
+  position: relative;
 }
 
 .timeline-item:hover .timeline-content {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent-color);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255,255,255,0.12);
 }
 
 /* Typography */
 .date {
-    display: inline-block;
-    font-family: var(--font-mono);
-    color: var(--accent-color);
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  display: inline-block;
+  font-family: var(--font-mono);
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
 }
 
 .school {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-    color: var(--text-primary);
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
 }
 
 .degree {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    font-weight: 500;
+  margin: 0 0 0.35rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 .location {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    opacity: 0.8;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.location i {
-    color: #FF4444;
-    /* Red pin as requested */
-    margin-right: 0.3rem;
-}
+.location i { color: #ff453a; }  /* Apple's system red */
 
-/* Mobile Adaptation */
-@media (max-width: 768px) {
-    .timeline-container::before {
-        left: 10px;
-    }
-
-    .timeline-item {
-        padding-left: 40px;
-    }
-
-    .timeline-marker {
-        left: 1px;
-    }
+/* Mobile */
+@media (max-width: 600px) {
+  .timeline-container::before { left: 10px; }
+  .timeline-item { padding-left: 38px; }
+  .timeline-marker { left: 1px; width: 18px; height: 18px; }
+  .timeline-content { padding: 1.1rem 1.2rem; }
 }

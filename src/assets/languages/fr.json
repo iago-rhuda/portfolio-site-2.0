@@ -99,7 +99,7 @@
     "ARTICLES_TEXT": "Découvrez quelques-unes des publications que j'ai réalisées.",
     "SEARCH-ENGINE": "Moteur de Recherche en Langage Naturel",
     "CARD-TEXT-SEARCH-ENGINE": "Moteur de traitement du langage naturel et de recherche d'information développé en Python, doté d'un tableau de bord Glassmorphism, d'un classement TF-IDF, d'un correcteur orthographique et d'une recherche de métadonnées boléenne.",
-    "CARD-TEXT-RAG": "Système de Génération Augmentée par Récupération (RAG) en cours de développement, intégrant de grands modèles de langage avec des pipelines personnalisés de récupération de documents.",
+    "CARD-TEXT-RAG": "Système de Génération Augmentée par Récupération (RAG) intégrant de grands modèles de langage avec des pipelines personnalisés de récupération de documents.",
     "CARD-TEXT-V2": "Portfolio personnel construit avec Angular, intégrant la traduction dynamique multilingue et des thèmes modernes clair/sombre.",
     "VISIT-APP": "App en ligne",
     "CAT-WEB": "Dév Web",
@@ -115,5 +115,5 @@
     "CARD-LONG-1": "Un site de portfolio personnel classique présentant mes premiers travaux, compétences et coordonnées. Construit avec HTML5, CSS3 et Bootstrap pour le style, et hébergé sur Netlify.",
     "CARD-LONG-V2": "La deuxième version de mon portfolio personnel. Construit avec Angular 15, utilisant TypeScript, et doté d'un système de traduction dynamique (i18n) prenant en charge 9 langues. Il comprend des transitions fluides, le support des modes clair/sombre, et un système de design minimaliste inspiré d'Apple.",
     "CARD-LONG-SEARCH-ENGINE": "Un moteur de recherche et de traitement du langage naturel (NLP) développé de zéro. Il propose un classement par pertinence basé sur le TF-IDF, un correcteur orthographique basé sur la distance d'édition et des filtres booléens de métadonnées. L'interface web offre un design Glassmorphic premium développé avec Python et Flask.",
-    "CARD-LONG-RAG": "Un système de génération augmentée par récupération (RAG) à venir. Il intègrera des grands modèles de langage (LLM) modernes à des bases de données vectorielles spécialisées et des chargeurs de documents (avec LangChain) pour fournir des réponses précises et contextualisées basées sur des documents privés."
+    "CARD-LONG-RAG": "Un système de génération augmentée par récupération (RAG) qui intègre des grands modèles de langage (LLM) modernes à des bases de données vectorielles spécialisées et des chargeurs de documents (avec LangChain) pour fournir des réponses précises et contextualisées basées sur des documents privés."
 }

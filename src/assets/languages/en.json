@@ -102,7 +102,7 @@
     "ARTICLES_TEXT": "Academic and technical publications I have contributed to.",
     "SEARCH-ENGINE": "Natural Language Search Engine",
     "CARD-TEXT-SEARCH-ENGINE": "NLP-powered information retrieval engine built from scratch in Python. Features a Glassmorphism web dashboard, TF-IDF ranking, spell-checker, and boolean metadata search.",
-    "CARD-TEXT-RAG": "Retrieval-Augmented Generation (RAG) system — coming soon. Integrating large language models with custom document retrieval pipelines for context-aware AI responses.",
+    "CARD-TEXT-RAG": "Retrieval-Augmented Generation (RAG) system integrating large language models with custom document retrieval pipelines for context-aware AI responses.",
     "CARD-TEXT-V2": "Personal portfolio built with Angular 15, featuring dynamic i18n translation across 9 languages and modern dark/light theming.",
     "VISIT-APP": "Live App",
     "CAT-WEB": "Web Dev",
@@ -118,5 +118,5 @@
     "CARD-LONG-1": "A classic personal portfolio website showcasing early work, skills, and contact information. Built with HTML5, CSS3, and Bootstrap for styling, and hosted on Netlify.",
     "CARD-LONG-V2": "The second iteration of my personal portfolio. Built with Angular 15, utilizing TypeScript, and featuring a custom translation system (i18n) supporting 9 languages. It includes smooth spring animations, light/dark mode support, and an Apple-inspired minimalist design system.",
     "CARD-LONG-SEARCH-ENGINE": "A custom NLP-powered information retrieval engine built from scratch. It features TF-IDF term weighting for document ranking, a spelling corrector based on edit distance, and boolean metadata filters. The web interface is designed with a premium Glassmorphism look using Python and Flask.",
-    "CARD-LONG-RAG": "An upcoming Retrieval-Augmented Generation (RAG) system. It will integrate modern large language models (LLMs) with specialized vector databases and document loaders (using LangChain) to provide precise, context-aware answers based on private document stores."
+    "CARD-LONG-RAG": "A Retrieval-Augmented Generation (RAG) system that integrates modern large language models (LLMs) with specialized vector databases and document loaders (using LangChain) to provide precise, context-aware answers based on private document stores."
 }

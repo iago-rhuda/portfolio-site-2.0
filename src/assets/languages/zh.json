@@ -101,7 +101,7 @@
     "ARTICLES_TEXT": "查看我发表的一些出版物。",
     "SEARCH-ENGINE": "自然语言搜索引擎",
     "CARD-TEXT-SEARCH-ENGINE": "使用 Python 从零构建的 NLP 和信息检索引擎。配备 Glassmorphism 仪表盘、TF-IDF 排名、拼写检查器和布尔元数据搜索功能。",
-    "CARD-TEXT-RAG": "正在开发中的检索增强生成（RAG）系统，将大型语言模型与定制文档检索流水线相结合。",
+    "CARD-TEXT-RAG": "检索增强生成（RAG）系统，将大型语言模型与定制文档检索流水线相结合。",
     "CARD-TEXT-V2": "使用 Angular 构建的个人作品集，具备动态多语言翻译和现代深色/浅色主题功能。",
     "VISIT-APP": "访问应用",
     "CAT-WEB": "Web 开发",
@@ -117,5 +117,5 @@
     "CARD-LONG-1": "一个经典的个人作品集网站，展示了我早期的项目、技能和联系方式。使用 HTML5、CSS3 和 Bootstrap 构建，并托管在 Netlify 上。",
     "CARD-LONG-V2": "我个人作品集网站的第二个迭代版本。使用 Angular 15 和 TypeScript 构建，具有支持 9 种语言的自定义国际化翻译系统（i18n）。包含平滑的弹簧动画、亮/暗模式切换，以及源自 Apple 启发极简主义设计系统。",
     "CARD-LONG-SEARCH-ENGINE": "一个从零构建的自然语言处理（NLP）信息检索和搜索引擎。它包含用于文档排序的 TF-IDF 权重算法、基于编辑距离的拼写纠错器以及布尔元数据检索机制。Web 界面使用 Python 和 Flask 打造，呈现出高级的毛玻璃（Glassmorphism）视觉风格。",
-    "CARD-LONG-RAG": "即将推出的检索增强生成（RAG）系统。它将现代大语言模型（LLM）与专业的向量数据库和文档加载器（基于 LangChain）结合，根据私有文档库提供精准且具备上下文感知能力的 AI 回答。"
+    "CARD-LONG-RAG": "检索增强生成（RAG）系统。它将现代大语言模型（LLM）与专业的向量数据库和文档加载器（基于 LangChain）结合，根据私有文档库提供精准且具备上下文感知能力的 AI 回答。"
 }

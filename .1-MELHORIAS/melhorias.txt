@@ -1,4 +1,0 @@
-========================== MELHORIAS A SEREM FEITAS PARA PRÓXIMA VERSÃO ==========================
-
-1. favicom
-2. nome da aba na vercel está ruim

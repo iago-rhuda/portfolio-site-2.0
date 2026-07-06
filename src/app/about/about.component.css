@@ -114,15 +114,12 @@
   font-size: 0.72rem;
 }
 
-/* Desktop: 4-column grid */
-.hobbies-desktop-container {
+/* Unified Hobbies Container */
+.hobbies-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.85rem;
 }
-
-/* Mobile carousel: hidden by default */
-.hobbies-mobile-container { display: none; }
 
 /* Hobby Card */
 .hobby-card {
@@ -184,18 +181,14 @@
 
 /* ── Tablet ── */
 @media (max-width: 992px) {
-  .hobbies-desktop-container { grid-template-columns: repeat(2, 1fr); }
+  /* Inherits correctly */
 }
-
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .about-card { padding: 1.5rem; border-radius: 18px; }
-
   .profile-img { width: 160px; height: 160px; }
-
-  .hobbies-desktop-container { display: none; }
-
-  .hobbies-mobile-container {
+  
+  .hobbies-container {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -205,18 +198,15 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-
-  .hobbies-mobile-container::-webkit-scrollbar { display: none; }
-
-  .hobbies-mobile-container .hobby-card {
+  .hobbies-container::-webkit-scrollbar { display: none; }
+  .hobbies-container .hobby-card {
     flex: 0 0 82%;
     scroll-snap-align: center;
     transform: none !important;
   }
-
   .info-grid { flex-direction: column; gap: 0.85rem; }
-
   .section-title,
   .subsection-title { text-align: center; }
 }
+
 @media (max-width: 768px) { .image-wrapper { margin-bottom: 1rem; } }

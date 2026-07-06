@@ -117,5 +117,9 @@
     "CARD-LONG-1": "一个经典的个人作品集网站，展示了我早期的项目、技能和联系方式。使用 HTML5、CSS3 和 Bootstrap 构建，并托管在 Netlify 上。",
     "CARD-LONG-V2": "我个人作品集网站的第二个迭代版本。使用 Angular 15 和 TypeScript 构建，具有支持 9 种语言的自定义国际化翻译系统（i18n）。包含平滑的弹簧动画、亮/暗模式切换，以及源自 Apple 启发极简主义设计系统。",
     "CARD-LONG-SEARCH-ENGINE": "一个从零构建的自然语言处理（NLP）信息检索和搜索引擎。它包含用于文档排序的 TF-IDF 权重算法、基于编辑距离的拼写纠错器以及布尔元数据检索机制。Web 界面使用 Python 和 Flask 打造，呈现出高级的毛玻璃（Glassmorphism）视觉风格。",
-    "CARD-LONG-RAG": "检索增强生成（RAG）系统。它将现代大语言模型（LLM）与专业的向量数据库和文档加载器（基于 LangChain）结合，根据私有文档库提供精准且具备上下文感知能力的 AI 回答。"
+    "CARD-LONG-RAG": "检索增强生成（RAG）系统。它将现代大语言模型（LLM）与专业的向量数据库和文档加载器（基于 LangChain）结合，根据私有文档库提供精准且具备上下文感知能力的 AI 回答。",
+    "ARTICLE_PIBIC_TITLE": "风力涡轮机故障预测 (PIBIC)",
+    "ARTICLE_PIBIC_DESC": "PUCPR的本科生研究，使用主成分分析 (PCA) 和逻辑回归来预测风力涡轮机叶片中的裂纹。",
+    "ARTICLE_COBEM_LONG_DESC": "评估用于结构损伤预测的TabPFN算法。结果表明无需超参数调整即可获得极高的准确性。 Mais detalhes técnicos e informações estendidas sobre o desenvolvimento desta pesquisa estarão disponíveis em breve. O trabalho explora metodologias e abordagens específicas da área.",
+    "ARTICLE_PIBIC_LONG_DESC": "Pesquisa de Iniciação Científica desenvolvida na PUCPR sob orientação do Prof. Dr. Helon Vicente Hultmann Ayala. O projeto, intitulado 'Desenvolvimento e Aplicações Inovadoras de Sistemas Inteligentes em Problemas de Regressão, Classificação e Previsão de Energia', utilizou Análise de Componentes Principais (PCA) e Regressão Logística para identificar tendências de rachaduras em pás de aerogeradores. A metodologia simplificou variáveis e alcançou acurácia de 92% na detecção preditiva, otimizando práticas de manutenção no setor de energia eólica."
 }

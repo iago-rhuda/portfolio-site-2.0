@@ -4,7 +4,7 @@
 
 /* Container */
 .about-container {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -97,49 +97,9 @@
   font-weight: 400;
 }
 
-/* ── CV Buttons ── */
-.resume-container {
-  flex-direction: row !important;
-  align-items: center;
-  gap: 1rem;
-}
-
-.resume-buttons { margin-top: 0; }
-
-.highlight-label {
-  color: var(--accent-color);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.btn-download {
-  background: var(--accent-color);
-  color: #fff;
-  border: none;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.35rem 0.9rem;
-  transition: background 0.2s var(--ease-apple), transform 0.2s;
-}
-
-.btn-download:hover {
-  background: var(--accent-hover);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.resume-buttons .btn-group {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-}
-
 /* ── Hobbies ── */
-.hobbies-section { margin-top: 2rem; }
+.hobbies-section { margin-top: 0; }
+@media (max-width: 991px) { .hobbies-section { margin-top: 2rem; } }
 
 .subsection-title {
   font-size: 1rem;
@@ -157,7 +117,7 @@
 /* Desktop: 4-column grid */
 .hobbies-desktop-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.85rem;
 }
 
@@ -259,3 +219,4 @@
   .section-title,
   .subsection-title { text-align: center; }
 }
+@media (max-width: 768px) { .image-wrapper { margin-bottom: 1rem; } }

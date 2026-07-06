@@ -70,11 +70,7 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
   ];
 
   // Triple the list for infinite scroll illusion
-  projects: Project[] = [
-    ...this.SOURCE,
-    ...this.SOURCE,
-    ...this.SOURCE,
-  ];
+  projects: Project[] = [...this.SOURCE];
 
   // ── Modal state ──────────────────────────────────────────────
   selectedProject: Project | null = null;
@@ -118,7 +114,7 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
   constructor(private zone: NgZone) {}
 
   ngAfterViewInit(): void {
-    this.jumpToMiddle();
+    
     this.zone.runOutsideAngular(() => {
       this.startAutoPlay();
     });
@@ -159,30 +155,7 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  onScroll(): void {
-    if (this.isScrolling) return;
-    const el = this.track;
-    const setWidth = this.getOneSetWidth();
-    const max = setWidth * 2;
-
-    if (el.scrollLeft <= 4) {
-      this.isScrolling = true;
-      el.style.scrollBehavior = 'auto';
-      el.scrollLeft = el.scrollLeft + setWidth;
-      requestAnimationFrame(() => {
-        el.style.scrollBehavior = '';
-        this.isScrolling = false;
-      });
-    } else if (el.scrollLeft >= max - 4) {
-      this.isScrolling = true;
-      el.style.scrollBehavior = 'auto';
-      el.scrollLeft = el.scrollLeft - setWidth;
-      requestAnimationFrame(() => {
-        el.style.scrollBehavior = '';
-        this.isScrolling = false;
-      });
-    }
-  }
+  onScroll(): void {}
 
   private getOneSetWidth(): number {
     return Math.round(this.track.scrollWidth / 3);
@@ -231,7 +204,7 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
 
   @HostListener('window:resize')
   onResize(): void {
-    this.jumpToMiddle();
+    
   }
 }
 

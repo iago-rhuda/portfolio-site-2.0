@@ -37,3 +37,61 @@
 #CONTACT  { background: var(--bg-primary); }
 
 /* Alternating bg creates subtle Apple-like rhythm */
+
+/* ── ECO BADGE ── */
+.eco-badge-container {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 9990;
+    padding: 0;
+    background: transparent;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .eco-badge-container {
+        bottom: 85px; /* Stay above the mobile navbar */
+        left: 16px;
+    }
+}
+
+.eco-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-glass);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: 50px;
+    padding: 6px 16px 6px 6px;
+    font-family: var(--font-mono, monospace);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.eco-badge:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: rgba(52, 199, 89, 0.4);
+    box-shadow: 0 4px 20px rgba(52, 199, 89, 0.15);
+    color: var(--text-primary);
+}
+.eco-score {
+    background: #34C759; /* Apple Green */
+    color: #000;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 14px;
+}
+.eco-text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}

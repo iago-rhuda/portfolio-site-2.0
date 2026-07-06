@@ -16,7 +16,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { QualificationsComponent } from './qualifications/qualifications.component';
 import { SkillsComponent } from './skills/skills.component';
-import { CurriculumComponent } from './curriculum/curriculum.component';
 import { ContactComponent } from './contact/contact.component';
 import { ArticlesComponent } from './articles/articles.component';
 
@@ -31,7 +30,6 @@ import { ArticlesComponent } from './articles/articles.component';
     AboutComponent,
     QualificationsComponent,
     SkillsComponent,
-    CurriculumComponent,
     ContactComponent,
     ArticlesComponent,
   ],

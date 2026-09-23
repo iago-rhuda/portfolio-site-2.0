@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent {
 
   constructor(
     private translate: TranslateService,
+    private titleService: Title
   ) {
     this.translate.addLangs(['en', 'pt', 'fr', 'it', 'es', 'de', 'ko', 'ja', 'zh']);
     const lang = this.translate.getBrowserLang();
@@ -21,6 +23,12 @@ export class AppComponent {
     } else {
       this.translate.setDefaultLang('en');
     }
+
+    this.translate.onLangChange.subscribe(() => {
+      this.translate.get('PAGE_TITLE').subscribe((res: string) => {
+        this.titleService.setTitle(res);
+      });
+    });
   }
 
   // =============================================================================

@@ -20,7 +20,7 @@ export class SwitchLangComponent implements OnInit {
     { value: 'zh', display: '中文', flag: '🇨🇳' }
   ];
 
-  isDarkMode = true;
+  isDarkMode = false;
   showName = false;
 
   @HostListener('window:scroll', [])

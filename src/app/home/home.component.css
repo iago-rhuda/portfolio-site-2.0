@@ -37,50 +37,28 @@
 }
 
 /* ============================================================
-   NAME — Apple gradient text animation
+   NAME — Harmonized Warm Typography (EcoIndex A Optimized)
    ============================================================ */
 .hero-name {
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
   font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
   margin-bottom: 1rem;
-
-  /* Animated gradient */
+  color: var(--text-primary);
   background: linear-gradient(
     135deg,
-    #f5f5f7 0%,
-    #7290FF 35%,
-    #94A9FF 50%,
-    #f5f5f7 65%,
-    #7290FF 100%
+    var(--text-primary) 30%,
+    var(--accent-color) 100%
   );
-  background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 6s linear infinite;
+  transition: transform 0.4s var(--ease-spring);
 }
 
-@keyframes gradient-shift {
-  0%   { background-position: 0% center; }
-  100% { background-position: 300% center; }
-}
-
-/* Light mode: darker gradient */
-.light-theme .hero-name {
-  background: linear-gradient(
-    135deg,
-    #1d1d1f 0%,
-    #2E5BFF 35%,
-    #7290FF 50%,
-    #1d1d1f 65%,
-    #2E5BFF 100%
-  );
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-name:hover {
+  transform: translateY(-2px);
 }
 
 /* ============================================================

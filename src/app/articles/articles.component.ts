@@ -18,12 +18,12 @@ export class ArticlesComponent implements AfterViewInit, OnDestroy {
 
   private readonly SOURCE = [
     {
-      title: 'ARTICLE_COBEM_TITLE',
-      link: '',
+      title: 'Tabular Prior-Data Fitted Network For Structural Damage Prediction',
+      link: '../assets/TABULAR_PRIOR-DATA_FITTED_NETWORK_FOR_STRUCTURAL.pdf',
       description: 'ARTICLE_COBEM_DESC',
       longDescription: 'ARTICLE_COBEM_LONG_DESC',
       lang: 'en',
-      pending: true,
+      pending: false,
       hideButton: false
     },
     {

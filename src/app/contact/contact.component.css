@@ -9,18 +9,20 @@
   max-width: 720px;
   margin: 0 auto;
   grid-template-columns: 1fr;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
 }
 
 @media (min-width: 600px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "email    github"
-      "phone    linkedin";
+      "github linkedin";
+    max-width: 600px;
+    justify-content: center;
   }
 
-  .area-email    { grid-area: email; }
-  .area-phone    { grid-area: phone; }
   .area-github   { grid-area: github; }
   .area-linkedin { grid-area: linkedin; }
 }

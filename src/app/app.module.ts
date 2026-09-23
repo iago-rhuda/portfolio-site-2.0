@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SwitchLangComponent } from './switch-lang/switch-lang.component';
-import { MobileNavbarComponent } from './mobile-navbar/mobile-navbar.component';
+
 import { SlideComponent } from './slide/slide.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -24,7 +24,7 @@ import { ArticlesComponent } from './articles/articles.component';
     AppComponent,
     NavbarComponent,
     SwitchLangComponent,
-    MobileNavbarComponent,
+
     SlideComponent,
     HomeComponent,
     AboutComponent,

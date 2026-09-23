@@ -88,9 +88,9 @@
 }
 
 .skill-tag {
-  background: rgba(255,255,255,0.04);
+  background: color-mix(in srgb, var(--text-primary) 6%, transparent);
   color: var(--text-secondary);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent);
   padding: 0.2rem 0.65rem;
   border-radius: 6px;
   font-family: var(--font-mono);
@@ -100,8 +100,8 @@
 
 .skill-card:hover .skill-tag {
   color: color-mix(in srgb, var(--text-secondary) 60%, var(--accent-color));
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.1);
+  background: color-mix(in srgb, var(--text-primary) 10%, transparent);
+  border-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
 }
 
 /* Level badges */

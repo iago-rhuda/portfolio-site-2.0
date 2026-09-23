@@ -119,5 +119,6 @@
     "ARTICLE_PIBIC_TITLE": "Wind Turbine Failure Prediction (PIBIC)",
     "ARTICLE_PIBIC_DESC": "Undergraduate Research at PUCPR using Principal Component Analysis (PCA) and Logistic Regression to predict cracks in wind turbine blades.",
     "ARTICLE_COBEM_LONG_DESC": "Evaluation of the TabPFN algorithm for structural damage prediction. Results demonstrate excellent accuracy without hyperparameter tuning, outperforming traditional models with strong potential for structural health monitoring. Further technical details and extended information about the development of this research will be available soon.",
-    "ARTICLE_PIBIC_LONG_DESC": "Undergraduate Research developed at PUCPR under the supervision of Prof. Dr. Helon Vicente Hultmann Ayala. The project utilized Principal Component Analysis (PCA) and Logistic Regression to identify crack trends in wind turbine blades. The methodology reduced dimensions and achieved 92% accuracy in predictive detection, significantly optimizing maintenance practices in the wind energy sector."
+    "ARTICLE_PIBIC_LONG_DESC": "Undergraduate Research developed at PUCPR under the supervision of Prof. Dr. Helon Vicente Hultmann Ayala. The project utilized Principal Component Analysis (PCA) and Logistic Regression to identify crack trends in wind turbine blades. The methodology reduced dimensions and achieved 92% accuracy in predictive detection, significantly optimizing maintenance practices in the wind energy sector.",
+    "PAGE_TITLE": "Iago Rhudá Ramos | Computer Engineer & AI"
 }

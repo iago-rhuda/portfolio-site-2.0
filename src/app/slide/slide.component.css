@@ -251,8 +251,8 @@
   font-family: var(--font-mono);
   font-size: 0.67rem;
   color: var(--text-secondary);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: color-mix(in srgb, var(--text-primary) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text-primary) 10%, transparent);
   border-radius: 5px;
   padding: 0.18rem 0.55rem;
   transition: color 0.2s, border-color 0.2s;
@@ -260,7 +260,7 @@
 
 .project-card:hover .tech-pill {
   color: color-mix(in srgb, var(--text-secondary) 60%, var(--accent-color));
-  border-color: rgba(255,255,255,0.1);
+  border-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
 }
 
 /* Future icon */

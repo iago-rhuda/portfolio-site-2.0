@@ -28,7 +28,7 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
       categoryClass: 'cat-web',
       techs: ['Bootstrap', 'HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/iago-rhuda/portfolio-site',
-      visitUrl: 'https://iago-rhuda.github.io/portfolio-site/',
+      visitUrl: 'https://harmonious-chebakia-277b16.netlify.app/',
       visitKey: 'VISIT',
     },
     {

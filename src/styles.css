@@ -3,20 +3,20 @@
    ============================================================ */
 
 :root {
-  /* === Colors === */
-  --bg-primary:   #000000;
-  --bg-secondary: #111111;
-  --bg-tertiary:  #1c1c1e;  /* Apple's systemGray6 */
-  --bg-glass:     rgba(255, 255, 255, 0.04);
-  --bg-glass-border: rgba(255, 255, 255, 0.08);
+  /* === Colors (Soft Pastel Warm Dark Theme) === */
+  --bg-primary:      #26211E;  /* Soft Warm Mocha / Dark Taupe */
+  --bg-secondary:    #322A26;  /* Soft Warm Section Background */
+  --bg-tertiary:     #443A34;  /* Pastel Warm Card Background */
+  --bg-glass:        rgba(50, 42, 38, 0.65);
+  --bg-glass-border: rgba(90, 78, 69, 0.5);
 
-  --text-primary:   #f5f5f7;  /* Apple's exact headline color */
-  --text-secondary: #86868b;  /* Apple's secondary label */
-  --text-tertiary:  #515154;
+  --text-primary:   #F5EBE0;  /* Soft Pastel Cream */
+  --text-secondary: #D0C3B4;  /* Muted Warm Sand */
+  --text-tertiary:  #9F9081;  /* Soft Taupe */
 
-  --accent-color: #7290FF;
-  --accent-hover: #94A9FF;
-  --accent-glow:  rgba(114, 144, 255, 0.25);
+  --accent-color: #E2B488;  /* Soft Caramel / Peach Accent */
+  --accent-hover: #EBC5A1;
+  --accent-glow:  rgba(226, 180, 136, 0.25);
 
   /* === Typography === */
   --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -44,22 +44,22 @@
 
 /* Light Theme */
 .light-theme {
-  --bg-primary:      #ffffff;
-  --bg-secondary:    #f5f5f7;  /* Apple's light bg */
-  --bg-tertiary:     #e8e8ed;
-  --bg-glass:        rgba(0, 0, 0, 0.03);
-  --bg-glass-border: rgba(0, 0, 0, 0.08);
+  --bg-primary:      #F0E5D4;  /* Warm Elegant Beige */
+  --bg-secondary:    #E7DAC6;  /* Deeper Warm Beige for Section Rhythm */
+  --bg-tertiary:     #DDD0B9;  /* Rich Accent Beige */
+  --bg-glass:        rgba(231, 218, 198, 0.7);  /* Translucent Glass Beige */
+  --bg-glass-border: rgba(198, 182, 159, 0.6);
 
-  --text-primary:   #1d1d1f;  /* Apple's exact dark text */
-  --text-secondary: #6e6e73;
-  --text-tertiary:  #a1a1a6;
+  --text-primary:   #2C2219;  /* Dark Espresso Brown */
+  --text-secondary: #58493B;  /* Deep Warm Brown */
+  --text-tertiary:  #837464;  /* Soft Warm Brown */
 
-  --accent-color: #2E5BFF;
-  --accent-hover: #1A44D1;
-  --accent-glow:  rgba(46, 91, 255, 0.2);
+  --accent-color: #B57846;  /* Warm Terracotta / Caramel Accent */
+  --accent-hover: #975F30;
+  --accent-glow:  rgba(181, 120, 70, 0.25);
 
-  --shadow-card:  0 1px 0 rgba(0,0,0,0.04), 0 8px 30px rgba(0,0,0,0.08);
-  --shadow-hover: 0 1px 0 rgba(0,0,0,0.06), 0 20px 50px rgba(0,0,0,0.14);
+  --shadow-card:  0 1px 0 rgba(44,34,25,0.04), 0 8px 30px rgba(44,34,25,0.08);
+  --shadow-hover: 0 1px 0 rgba(44,34,25,0.06), 0 20px 50px rgba(44,34,25,0.14);
 }
 
 /* ============================================================

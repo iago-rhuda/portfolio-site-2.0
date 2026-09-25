@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -25,24 +26,25 @@ export class SwitchLangComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showName = window.scrollY > 100; // Show name after scrolling 100px
+    if (isPlatformBrowser(this.platformId)) {
+      this.showName = window.scrollY > 100;
+    }
   }
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
-    // Ensure dark mode is default
     this.updateTheme();
 
-    // Browser Language Detection
-    const browserLang = navigator.language || (navigator as any).userLanguage;
-    const langCode = browserLang ? browserLang.split('-')[0] : 'en'; // Extract 'en' from 'en-US'
-
-    // Check if the extracted language is supported, otherwise fallback to 'en'
-    const supportedLang = this.options.find(o => o.value === langCode) ? langCode : 'en';
-
-    // Set the language
-    this.translate.use(supportedLang);
+    if (isPlatformBrowser(this.platformId)) {
+      // Browser Language Detection
+      const browserLang = navigator.language || (navigator as any).userLanguage;
+      const langCode = browserLang ? browserLang.split('-')[0] : 'en';
+      const supportedLang = this.options.find(o => o.value === langCode) ? langCode : 'en';
+      this.translate.use(supportedLang);
+    } else {
+      this.translate.use('en');
+    }
   }
 
   onChange(lang: string) {
@@ -61,6 +63,7 @@ export class SwitchLangComponent implements OnInit {
   }
 
   updateTheme() {
+    if (!isPlatformBrowser(this.platformId)) return;
     if (this.isDarkMode) {
       document.body.classList.remove('light-theme');
     } else {

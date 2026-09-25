@@ -6,7 +6,10 @@ import {
   OnDestroy,
   NgZone,
   HostListener,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-articles',
@@ -47,13 +50,15 @@ export class ArticlesComponent implements AfterViewInit, OnDestroy {
   private isDragging = false;
   private dragStartX = 0;
 
-  constructor(private zone: NgZone) {}
+  constructor(private zone: NgZone, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
   }
 
   ngOnDestroy(): void {
-    document.body.style.overflow = '';
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = '';
+    }
   }
 
   private get track(): HTMLDivElement {
@@ -83,14 +88,18 @@ export class ArticlesComponent implements AfterViewInit, OnDestroy {
     this.selectedArticle = article;
     this.modalVisible = true;
     this.pauseAutoPlay();
-    document.body.style.overflow = 'hidden';
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   closeModal(): void {
     this.modalVisible = false;
     setTimeout(() => {
       this.selectedArticle = null;
-      document.body.style.overflow = '';
+      if (isPlatformBrowser(this.platformId)) {
+        document.body.style.overflow = '';
+      }
     }, 300);
     this.resumeAutoPlay();
   }

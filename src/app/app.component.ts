@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
 
@@ -13,7 +14,8 @@ export class AppComponent {
 
   constructor(
     private translate: TranslateService,
-    private titleService: Title
+    private titleService: Title,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.translate.addLangs(['en', 'pt', 'fr', 'it', 'es', 'de', 'ko', 'ja', 'zh']);
     const lang = this.translate.getBrowserLang();
@@ -33,6 +35,7 @@ export class AppComponent {
 
   // =============================================================================
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     this.animeScroll();
     window.addEventListener('scroll', () => {
       this.animeScroll();
@@ -40,6 +43,7 @@ export class AppComponent {
   }
 
   private animeScroll() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const items = document.querySelectorAll("[data-anime]");
     const windowTop = window.pageYOffset + window.innerHeight * 0.85;
 
@@ -65,6 +69,7 @@ export class AppComponent {
   }
 
   private detectarSecaoAtiva() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const secoes = ['HOME', 'ABOUT', 'QUALIFICATIONS', 'SKILLS', 'PORTFOLIO', 'ARTICLES', 'CURRICULUM', 'CONTACT'];
 
     for (const secao of secoes) {

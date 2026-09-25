@@ -6,7 +6,10 @@ import {
   OnDestroy,
   NgZone,
   HostListener,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-slide',
@@ -82,7 +85,9 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
     this.selectedProject = project;
     this.modalVisible = true;
     this.pauseAutoPlay();
-    document.body.style.overflow = 'hidden';
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   closeModal(): void {
@@ -90,7 +95,9 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
     // Delay clearing so exit animation plays
     setTimeout(() => {
       this.selectedProject = null;
-      document.body.style.overflow = '';
+      if (isPlatformBrowser(this.platformId)) {
+        document.body.style.overflow = '';
+      }
     }, 300);
     this.resumeAutoPlay();
   }
@@ -111,10 +118,10 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
   private dragStartX = 0;
   private readonly AUTO_PLAY_INTERVAL = 4000;
 
-  constructor(private zone: NgZone) {}
+  constructor(private zone: NgZone, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    
+    if (!isPlatformBrowser(this.platformId)) return;
     this.zone.runOutsideAngular(() => {
       this.startAutoPlay();
     });
@@ -122,7 +129,9 @@ export class SlideComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.stopAutoPlay();
-    document.body.style.overflow = '';
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = '';
+    }
   }
 
   // ── Drag detection (distinguish tap from drag) ───────────────

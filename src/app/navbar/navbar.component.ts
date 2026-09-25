@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,8 @@ import { Component, HostListener } from '@angular/core';
 export class NavbarComponent {
   secaoAtiva: string = 'HOME';
   isMenuOpen: boolean = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
@@ -27,6 +30,7 @@ export class NavbarComponent {
   }
 
   private detectarSecaoAtiva() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const secoes = ['HOME', 'ABOUT', 'QUALIFICATIONS', 'SKILLS', 'PORTFOLIO', 'ARTICLES', 'CURRICULUM', 'CONTACT'];
 
     for (const secao of secoes) {
